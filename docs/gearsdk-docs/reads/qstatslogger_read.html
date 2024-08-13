@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qstatslogger.hpp and qstatslogger.cpp &mdash; gearsdk 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=764b5287" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles.5966e581.css?v=b75bc61f" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="qtimer.hpp and qtimer.cpp" href="qtimer_read.html" />
+    <link rel="prev" title="qbuffer.hpp" href="qbuffer_read.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            gearsdk
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/common.html">common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/networkcommon.html">networkcommon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/qh3server.html">qh3server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/qhiredis.html">qhiredis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/qzookeeper.html">qzookeeper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/servercommon.html">servercommon</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Important files:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="essentials_read.html">essentials.hpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qbuffer_read.html">qbuffer.hpp</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">qstatslogger.hpp and qstatslogger.cpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qtimer_read.html">qtimer.hpp and qtimer.cpp</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gearsdk</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qstatslogger.hpp and qstatslogger.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/reads/qstatslogger_read.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qstatslogger-hpp-and-qstatslogger-cpp">
+<span id="qstatslogger-hpp"></span><h1>qstatslogger.hpp and qstatslogger.cpp<a class="headerlink" href="#qstatslogger-hpp-and-qstatslogger-cpp" title="Link to this heading"></a></h1>
+<p>The <cite>qstatslogger</cite> class is responsible for logging statistical data to a text file. It extends the <cite>qtextfilelogger</cite> class and includes methods for initializing the logger, logging various types of statistics, and managing client and server session information.</p>
+<p><strong>Header File: `qstatslogger.hpp`</strong></p>
+<p>The header file defines the class and its interface. Key methods include:</p>
+<ul class="simple">
+<li><p><strong>`init(const qstring&amp; install_os, const qstring&amp; device_name, const qstring&amp; device_model, const int total_ram)`</strong>: Initializes the logger with system and device information.</p></li>
+<li><p><strong>`log_stats(const qstring&amp; buffer)`</strong>: Logs the provided buffer content.</p></li>
+<li><p><strong>`client_open(const qstring&amp; duid, const qstring&amp; epic, const qstring&amp; myth, const qstring&amp; legend, const qstring&amp; story)`</strong>: Logs client session opening information.</p></li>
+<li><p><strong>`server_count(const qstring&amp; count, long count_val, const qstring&amp; session, const qstring&amp; pid, const qstring&amp; version, const qstring&amp; epic, const qstring&amp; myth, const qstring&amp; legend, const qstring&amp; story, const qstring&amp; message)`</strong>: Logs server-side count information.</p></li>
+</ul>
+<p><strong>Source File: `qstatslogger.cpp`</strong></p>
+<p>The source file implements the methods defined in the header. Key functionalities include:</p>
+<ul class="simple">
+<li><p><strong>Constructor and Destructor</strong>
+- <strong>`qstatslogger::qstatslogger()`</strong>: Initializes the logger.
+- <strong>`qstatslogger::~qstatslogger()`</strong>: Cleans up resources.</p></li>
+<li><p><strong>Initialization</strong>
+- <strong>`void qstatslogger::init(const qstring&amp; install_os_, const qstring&amp; device_name_, const qstring&amp; device_model_, const int total_ram_)`</strong>: Sets up the logger with system and device details.</p></li>
+<li><p><strong>Logging Statistics</strong>
+- <strong>`size_t qstatslogger::log_stats(const qstring&amp; buffer)`</strong>: Logs data to the file, checking if the file is initialized.</p></li>
+<li><p><strong>Client and Server Logging</strong>
+- <strong>`size_t qstatslogger::client_open(const qstring&amp; duid, const qstring&amp; epic, const qstring&amp; myth, const qstring&amp; legend, const qstring&amp; story)`</strong>: Logs information when a client session opens.
+- <strong>`size_t qstatslogger::server_count(const qstring&amp; count, long count_val, const qstring&amp; session, const qstring&amp; pid, const qstring&amp; version, const qstring&amp; epic, const qstring&amp; myth, const qstring&amp; legend, const qstring&amp; story, const qstring&amp; message)`</strong>: Logs server-side statistics.</p></li>
+</ul>
+<p><strong>SQL Table Creation</strong></p>
+<p>For reference, here are SQL table creation statements related to the <cite>qstatslogger</cite> class:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">stats_count</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">count</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="k">session</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pid</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="k">version</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">epic</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">myth</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">legend</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">story</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">install_os</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">server_tstamp</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
+<span class="w">    </span><span class="n">client_tstamp</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
+<span class="w">    </span><span class="k">time</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">message</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">device_name</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">device_model</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">total_ram</span><span class="w"> </span><span class="n">INT4</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">stats_open</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="k">version</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">duid</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">epic</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">myth</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">legend</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">story</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">install_os</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">client_tstamp</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
+<span class="w">    </span><span class="k">time</span><span class="w"> </span><span class="nb">BIGINT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">device_name</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">device_model</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">total_ram</span><span class="w"> </span><span class="n">INT4</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Example Usage</strong></p>
+<p>Here is an example of how to use the <cite>qstatslogger</cite> class:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;qstatslogger.hpp&quot;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">qstatslogger</span><span class="w"> </span><span class="n">logger</span><span class="p">;</span>
+<span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="s">&quot;Windows 10&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MyPC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ModelX&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8192</span><span class="p">);</span><span class="w"> </span><span class="c1">// Initialize with OS, device name, model, and RAM</span>
+
+<span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="n">set_client_session</span><span class="p">(</span><span class="s">&quot;session123&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="n">set_client_version</span><span class="p">(</span><span class="s">&quot;1.0.0&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="n">set_client_pid</span><span class="p">(</span><span class="s">&quot;pid123&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="n">client_open</span><span class="p">(</span><span class="s">&quot;duid456&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;epic_event&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mythical&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;legendary&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;storyline&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">logger</span><span class="p">.</span><span class="n">server_count</span><span class="p">(</span><span class="s">&quot;event_count&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;session123&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pid123&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;epic_event&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;mythical&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;legendary&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;storyline&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Message content&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qbuffer_read.html" class="btn btn-neutral float-left" title="qbuffer.hpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qtimer_read.html" class="btn btn-neutral float-right" title="qtimer.hpp and qtimer.cpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, amudaliar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

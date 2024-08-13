@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qtimer.hpp and qtimer.cpp &mdash; gearsdk 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=764b5287" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles.5966e581.css?v=b75bc61f" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="qstatslogger.hpp and qstatslogger.cpp" href="qstatslogger_read.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            gearsdk
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API reference:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/common.html">common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/networkcommon.html">networkcommon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/qh3server.html">qh3server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/qhiredis.html">qhiredis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/qzookeeper.html">qzookeeper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/servercommon.html">servercommon</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Important files:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="essentials_read.html">essentials.hpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qbuffer_read.html">qbuffer.hpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qstatslogger_read.html">qstatslogger.hpp and qstatslogger.cpp</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">qtimer.hpp and qtimer.cpp</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">gearsdk</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qtimer.hpp and qtimer.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/reads/qtimer_read.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qtimer-hpp-and-qtimer-cpp">
+<span id="qtimer-hpp"></span><h1>qtimer.hpp and qtimer.cpp<a class="headerlink" href="#qtimer-hpp-and-qtimer-cpp" title="Link to this heading"></a></h1>
+<p>The <cite>qtimer</cite> and <cite>qtimer_sceduler</cite> classes are designed for managing and scheduling timers using the <cite>libev</cite> event loop. The <cite>qtimer</cite> class represents a single timer, while the <cite>qtimer_sceduler</cite> class handles the scheduling and management of multiple timers.</p>
+<p><strong>Header File: `qtimer.hpp`</strong></p>
+<p>The header file defines two classes: <cite>qtimer</cite> and <cite>qtimer_sceduler</cite>.</p>
+<p><strong>Class: `qtimer`</strong></p>
+<p>The <cite>qtimer</cite> class provides functionalities to create and manage timers. Key components include:</p>
+<ul class="simple">
+<li><p><strong>Constructor and Destructor</strong>
+- <strong>`qtimer(struct ev_loop* loop, type_qtimer_cb timeout_callback, void* data, float delay = 1.0f, float count = 1)`</strong>: Initializes a new timer with the specified delay and count. The timer uses the provided callback function.
+- <strong>`virtual ~qtimer()`</strong>: Destructor for cleaning up resources.</p></li>
+<li><p><strong>Methods</strong>
+- <strong>`void update_delay(float new_delay)`</strong>: Updates the timer’s delay and restarts it with the new delay.
+- <strong>`ev_timer timer`</strong>: The underlying <cite>libev</cite> timer structure.
+- <strong>`struct ev_loop* loop`</strong>: Pointer to the event loop.
+- <strong>`const type_qtimer_cb timeout_callback`</strong>: Callback function invoked when the timer expires.
+- <strong>`int count`</strong>: Number of times the timer should fire before stopping (use <cite>-1</cite> for infinite repeat).
+- <strong>`bool finished`</strong>: Indicates whether the timer has completed its execution.
+- <strong>`float delay`</strong>: Time interval between timer events.
+- <strong>`void* data`</strong>: User-defined data passed to the callback.</p></li>
+</ul>
+<p><strong>Class: `qtimer_sceduler`</strong></p>
+<p>The <cite>qtimer_sceduler</cite> class manages a collection of <cite>qtimer</cite> instances. Key components include:</p>
+<ul class="simple">
+<li><p><strong>Constructor and Destructor</strong>
+- <strong>`qtimer_sceduler()`</strong>: Initializes the scheduler.
+- <strong>`virtual ~qtimer_sceduler()`</strong>: Cleans up all managed timers.</p></li>
+<li><p><strong>Methods</strong>
+- <strong>`void set_ev_lopp(struct ev_loop* loop)`</strong>: Sets the event loop for the scheduler.
+- <strong>`qtimer* schedule_timer(type_qtimer_cb timeout_callback, float delay, void* data = nullptr)`</strong>: Schedules a one-time timer.
+- <strong>`qtimer* schedule_count_timer(type_qtimer_cb timeout_callback, float delay, int count, void* data = nullptr)`</strong>: Schedules a timer that fires a specified number of times.
+- <strong>`qtimer* schedule_repeat_timer(type_qtimer_cb timeout_callback, float delay, void* data = nullptr)`</strong>: Schedules a repeating timer.
+- <strong>`void cancel_timer(qtimer* qtimer_)`</strong>: Cancels a running timer without destroying it.
+- <strong>`bool cancel_and_destroy_timer(qtimer* qtimer_)`</strong>: Cancels and destroys a timer.
+- <strong>`bool is_timer_present_in_list(qtimer* qtimer_)`</strong>: Checks if a timer is present in the scheduler’s list.
+- <strong>`void shutdown_mainloop()`</strong>: Breaks out of the event loop.</p></li>
+</ul>
+<p><strong>Example Usage</strong></p>
+<p>Here’s a simple example demonstrating how to use the <cite>qtimer</cite> and <cite>qtimer_sceduler</cite> classes:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;qtimer.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ev.h&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">example_callback</span><span class="p">(</span><span class="n">qtimer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">timer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">DEBUG_PRINT</span><span class="p">(</span><span class="n">LOG_LEVEL_0</span><span class="p">,</span><span class="w"> </span><span class="n">__LOGTAG__</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Timer expired&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">ev_loop</span><span class="o">*</span><span class="w"> </span><span class="n">loop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ev_default_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">qtimer_sceduler</span><span class="w"> </span><span class="n">scheduler</span><span class="p">;</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="n">set_ev_lopp</span><span class="p">(</span><span class="n">loop</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Schedule a one-time timer</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="n">schedule_timer</span><span class="p">([](</span><span class="n">qtimer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">timer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DEBUG_PRINT</span><span class="p">(</span><span class="n">LOG_LEVEL_0</span><span class="p">,</span><span class="w"> </span><span class="n">__LOGTAG__</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;One-time timer expired&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Schedule a repeating timer</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="n">schedule_repeat_timer</span><span class="p">([](</span><span class="n">qtimer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">timer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DEBUG_PRINT</span><span class="p">(</span><span class="n">LOG_LEVEL_0</span><span class="p">,</span><span class="w"> </span><span class="n">__LOGTAG__</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Repeating timer expired&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Schedule a count timer</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="n">schedule_count_timer</span><span class="p">([](</span><span class="n">qtimer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">timer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DEBUG_PRINT</span><span class="p">(</span><span class="n">LOG_LEVEL_0</span><span class="p">,</span><span class="w"> </span><span class="n">__LOGTAG__</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Count timer expired&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">ev_run</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This example demonstrates the creation of a <cite>qtimer_sceduler</cite>, setting an event loop, and scheduling various types of timers.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qstatslogger_read.html" class="btn btn-neutral float-left" title="qstatslogger.hpp and qstatslogger.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, amudaliar.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

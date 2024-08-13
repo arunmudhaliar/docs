@@ -7,7 +7,9 @@
   <title>networkcommon &mdash; gearsdk 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=a67ba085" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=764b5287" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles.5966e581.css?v=b75bc61f" />
 
   
   <!--[if lt IE 9]>
@@ -19,6 +21,8 @@
         <script src="../_static/documentation_options.js?v=2709fde1"></script>
         <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -30,7 +34,7 @@
   <div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: #2980B9" >
+        <div class="wy-side-nav-search" >
 
           
           
@@ -172,12 +176,19 @@
 <li class="toctree-l1"><a class="reference internal" href="qzookeeper.html">qzookeeper</a></li>
 <li class="toctree-l1"><a class="reference internal" href="servercommon.html">servercommon</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Important files:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../reads/essentials_read.html">essentials.hpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reads/qbuffer_read.html">qbuffer.hpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reads/qstatslogger_read.html">qstatslogger.hpp and qstatslogger.cpp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reads/qtimer_read.html">qtimer.hpp and qtimer.cpp</a></li>
+</ul>
 
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">gearsdk</a>
       </nav>
@@ -200,6 +211,66 @@
              
   <section id="networkcommon">
 <h1>networkcommon<a class="headerlink" href="#networkcommon" title="Link to this heading"></a></h1>
+<p><strong>Brief about each files</strong></p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">essentials.hpp</span></code>: Contains essential utility functions used across the project.</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For detailed information on essential utilities and classes used in the project, refer to the <a class="reference external" href="../reads/essentials_read.html">essentials.hpp</a> documentation.</p>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">qbuffer.hpp*</span></code>: A data buffer for handling buffer on heap memory.</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For detailed information on qbuffer utilities and classes used in the project, refer to the <a class="reference external" href="../reads/qbuffer_read.html">qbuffer.hpp</a> documentation.</p>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">qstatslogger.hpp*</span></code>: For logging statistical data.</dt><dd><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This documentation provides a detailed explanation of the <a class="reference external" href="../reads/qstatslogger_read.html">qstatslogger.hpp</a> class, including its header and source files, SQL table creation statements, and an example usage.</p>
+</div>
+</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">qtextfilelogger.hpp</span></code>: For logging text data to files.</p>
+<p><code class="docutils literal notranslate"><span class="pre">message.hpp</span></code>: Defines general message structures or classes used in the network communication.</p>
+<p><code class="docutils literal notranslate"><span class="pre">roommessage.hpp</span></code>: Contains definitions for handling messages related to game rooms.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>To get a glimpse of important functions</strong></p>
+<p><strong>message_room_base</strong></p>
+<ul class="simple">
+<li><p><strong>Inheritance</strong>: Inherits from <cite>message_base</cite>.</p></li>
+<li><p><strong>Purpose</strong>: Serves as a base class for all room-related messages.</p></li>
+</ul>
+<p><strong>Key Members</strong></p>
+<ul class="simple">
+<li><p><strong>signature</strong>: A unique identifier for the message type.</p></li>
+<li><p><strong>cached_type_string_crc</strong>: Cached CRC value for the message type string.</p></li>
+</ul>
+<p><strong>Key Methods</strong></p>
+<ul class="simple">
+<li><p><strong>serialize</strong>: Serializes the message to a JSON object.</p></li>
+<li><p><strong>deserialize</strong>: Deserializes the message from a JSON object.</p></li>
+<li><p><strong>deserialize_header</strong>: Static method to deserialize the header of a message.</p></li>
+</ul>
+<p><strong>msg_room_match_request</strong></p>
+<ul class="simple">
+<li><p><strong>Inheritance</strong>: Inherits from <cite>message_room_base</cite>.</p></li>
+<li><p><strong>Purpose</strong>: Represents a request to match a room.</p></li>
+</ul>
+<p><strong>Key Members</strong></p>
+<ul class="simple">
+<li><p><strong>room_config</strong>: Configuration for the room.</p></li>
+<li><p><strong>prev_cid_hash_val</strong>: Used for reconnection.</p></li>
+<li><p><strong>room_id</strong>: Used for reconnection.</p></li>
+<li><p><strong>pid</strong>: Player ID.</p></li>
+</ul>
+<p><strong>Key Methods</strong></p>
+<ul class="simple">
+<li><p><strong>serialize</strong>: Serializes the message to a JSON object.</p></li>
+<li><p><strong>deserialize</strong>: Deserializes the message from a JSON object.</p></li>
+</ul>
+</div>
+</div></blockquote>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
