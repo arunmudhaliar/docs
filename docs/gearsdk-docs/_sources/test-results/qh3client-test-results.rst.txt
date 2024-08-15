@@ -1,23 +1,41 @@
 Test results - qh3client
 ========================
 
-**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/0
+.. raw:: html
 
-**Result:** Passed
-
-**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/1
-
-**Result:** Passed
-
-**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/2
-
-**Result:** Passed
-
-**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/3
-
-**Result:** Passed
-
-**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/4
-
-**Result:** Passed
-
+   <table class="test-result-table">
+   <thead>
+   <tr>
+     <th>Test Case</th>
+     <th>Result</th>
+     <th>Message</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_request/0</td>
+     <td>Passed</td>
+     <td>No issues</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_request/1</td>
+     <td>Passed</td>
+     <td>No issues</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_request/2</td>
+     <td>Passed</td>
+     <td>No issues</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_request/3</td>
+     <td>Passed</td>
+     <td>No issues</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_request/4</td>
+     <td>Passed</td>
+     <td>No issues</td>
+   </tr>
+   </tbody>
+   </table>
