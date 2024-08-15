@@ -1,0 +1,23 @@
+Test results - qh3client
+========================
+
+**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/0
+
+**Result:** Passed
+
+**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/1
+
+**Result:** Passed
+
+**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/2
+
+**Result:** Passed
+
+**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/3
+
+**Result:** Passed
+
+**Test Case:** runs_five_time/functional_test_qh3client::test_send_request/4
+
+**Result:** Passed
+
