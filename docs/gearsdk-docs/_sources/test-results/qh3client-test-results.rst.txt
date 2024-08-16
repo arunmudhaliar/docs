@@ -7,12 +7,12 @@ Test results - qh3client
    <h3>Summary</h3>
    <table class="summary-table">
    <tr>
-     <td><strong>Total tests:</strong> 6</td>
+     <td><strong>Total tests:</strong> 10</td>
      <td><strong>Failures:</strong> 0</td>
      <td><strong>Disabled:</strong> 0</td>
      <td><strong>Errors:</strong> 0</td>
-     <td><strong>Total time taken:</strong> 16.477s</td>
-     <td><strong>Timestamp:</strong> 2024-08-16T11:28:51.447</td>
+     <td><strong>Total time taken:</strong> 24.334s</td>
+     <td><strong>Timestamp:</strong> 2024-08-16T19:21:56.261</td>
    </tr>
    </table>
 
@@ -20,54 +20,15 @@ Test results - qh3client
 
 .. raw:: html
 
-   <h3>Suite: functional_test_qh3client</h3>
+   <h3 class="normal">Suite: runs_five_time/functional_test_qh3client</h3>
    <table class="suite-summary-table">
    <tr>
-     <td><strong>Tests:</strong> 1</td>
+     <td><strong>Tests:</strong> 10</td>
      <td><strong>Failures:</strong> 0</td>
      <td><strong>Disabled:</strong> 0</td>
      <td><strong>Errors:</strong> 0</td>
-     <td><strong>Time:</strong> 1.473s</td>
-     <td><strong>Timestamp:</strong> 2024-08-16T11:28:51.447</td>
-   </tr>
-   </table>
-
-   <table class="test-result-table">
-   <thead>
-   <tr>
-     <th>Test Case</th>
-     <th>Result</th>
-     <th>Message</th>
-     <th>Execution time</th>
-     <th>Timestamp</th>
-   </tr>
-   </thead>
-   <tbody>
-   <tr class="passed">
-     <td>functional_test_qh3client::test_send_async_request_with_callback</td>
-     <td>Passed</td>
-     <td>No issues</td>
-     <td>1.473s</td>
-     <td>2024-08-16T11:28:51.447</td>
-   </tr>
-   </tbody>
-   </table>
-
-.. raw:: html
-
-   <div class="single-line-separator"></div>
-
-.. raw:: html
-
-   <h3>Suite: runs_five_time/functional_test_qh3client</h3>
-   <table class="suite-summary-table">
-   <tr>
-     <td><strong>Tests:</strong> 5</td>
-     <td><strong>Failures:</strong> 0</td>
-     <td><strong>Disabled:</strong> 0</td>
-     <td><strong>Errors:</strong> 0</td>
-     <td><strong>Time:</strong> 15.004s</td>
-     <td><strong>Timestamp:</strong> 2024-08-16T11:28:52.920</td>
+     <td><strong>Time:</strong> 24.334s</td>
+     <td><strong>Timestamp:</strong> 2024-08-16T19:21:56.261</td>
    </tr>
    </table>
 
@@ -86,36 +47,71 @@ Test results - qh3client
      <td>runs_five_time/functional_test_qh3client::test_send_request/0</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.921s</td>
-     <td>2024-08-16T11:28:52.920</td>
+     <td>2.563s</td>
+     <td>2024-08-16T19:21:56.261</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/1</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.845s</td>
-     <td>2024-08-16T11:28:55.842</td>
+     <td>2.335s</td>
+     <td>2024-08-16T19:21:58.825</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/2</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.956s</td>
-     <td>2024-08-16T11:28:58.687</td>
+     <td>2.389s</td>
+     <td>2024-08-16T19:22:01.160</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/3</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>3.149s</td>
-     <td>2024-08-16T11:29:01.643</td>
+     <td>2.107s</td>
+     <td>2024-08-16T19:22:03.550</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/4</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>3.13s</td>
-     <td>2024-08-16T11:29:04.793</td>
+     <td>2.478s</td>
+     <td>2024-08-16T19:22:05.658</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_async_request_with_callback/0</td>
+     <td>Passed</td>
+     <td>No issues</td>
+     <td>2.655s</td>
+     <td>2024-08-16T19:22:08.136</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_async_request_with_callback/1</td>
+     <td>Passed</td>
+     <td>No issues</td>
+     <td>2.633s</td>
+     <td>2024-08-16T19:22:10.792</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_async_request_with_callback/2</td>
+     <td>Passed</td>
+     <td>No issues</td>
+     <td>2.289s</td>
+     <td>2024-08-16T19:22:13.425</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_async_request_with_callback/3</td>
+     <td>Passed</td>
+     <td>No issues</td>
+     <td>2.258s</td>
+     <td>2024-08-16T19:22:15.715</td>
+   </tr>
+   <tr class="passed">
+     <td>runs_five_time/functional_test_qh3client::test_send_async_request_with_callback/4</td>
+     <td>Passed</td>
+     <td>No issues</td>
+     <td>2.622s</td>
+     <td>2024-08-16T19:22:17.973</td>
    </tr>
    </tbody>
    </table>
