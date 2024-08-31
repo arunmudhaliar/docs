@@ -137,9 +137,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/qh3server.html#_CPPv420bridge_h3_connection">bridge_h3_connection (C++ class)</a>
 </li>
-      <li><a href="api/qh3server.html#_CPPv4N20bridge_h3_connection18destroy_connectionEP7ev_loopP11conn_io_qh3">bridge_h3_connection::destroy_connection (C++ function)</a>
+      <li><a href="api/qh3server.html#_CPPv4N20bridge_h3_connection18destroy_connectionEP11conn_io_qh3">bridge_h3_connection::destroy_connection (C++ function)</a>
 </li>
-      <li><a href="api/qh3server.html#_CPPv4N20bridge_h3_connection12flush_egressEP7ev_loopP11conn_io_qh3">bridge_h3_connection::flush_egress (C++ function)</a>
+      <li><a href="api/qh3server.html#_CPPv4N20bridge_h3_connection12flush_egressEP11conn_io_qh3">bridge_h3_connection::flush_egress (C++ function)</a>
 </li>
       <li><a href="api/qh3server.html#_CPPv4N20bridge_h3_connection12get_mainloopEv">bridge_h3_connection::get_mainloop (C++ function)</a>
 </li>
@@ -215,10 +215,10 @@
 </li>
       <li><a href="api/networkcommon.html#_CPPv4NK15conn_io_req_res11get_payloadEv">conn_io_req_res::get_payload (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/networkcommon.html#_CPPv4N15conn_io_req_res14has_crc_headerEv">conn_io_req_res::has_crc_header (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/networkcommon.html#_CPPv4N15conn_io_req_res6headerE">conn_io_req_res::header (C++ struct)</a>
 
       <ul>
@@ -271,11 +271,15 @@
 </li>
       <li><a href="api/qh3server.html#_CPPv4N11connections14local_addr_lenE">connections::local_addr_len (C++ member)</a>
 </li>
+      <li><a href="api/qh3server.html#_CPPv4N11connections11poll_handleE">connections::poll_handle (C++ member)</a>
+</li>
       <li><a href="api/qh3server.html#_CPPv4N11connections27quic_alternate_protocol_strE">connections::quic_alternate_protocol_str (C++ member)</a>
 </li>
       <li><a href="api/qh3server.html#_CPPv4N11connections11server_portE">connections::server_port (C++ member)</a>
 </li>
       <li><a href="api/qh3server.html#_CPPv4N11connections4sockE">connections::sock (C++ member)</a>
+</li>
+      <li><a href="api/qh3server.html#_CPPv4N11connections10udp_handleE">connections::udp_handle (C++ member)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -287,11 +291,13 @@
 </li>
       <li><a href="api/common.html#c.DEBUG_PRINT2">DEBUG_PRINT2 (C macro)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/common.html#c.DECLSPEC">DECLSPEC (C macro)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/qh3server.html#c.DEFAULT_TIMER_ROUTER_HB_INTERVAL_IN_SECONDS">DEFAULT_TIMER_ROUTER_HB_INTERVAL_IN_SECONDS (C macro)</a>
+</li>
+      <li><a href="api/networkcommon.html#c.DISABLE_PERF_READS">DISABLE_PERF_READS (C macro)</a>
 </li>
       <li><a href="api/qh3server.html#c.DROP_CONNECTION_AFTER">DROP_CONNECTION_AFTER (C macro)</a>
 </li>
@@ -327,10 +333,10 @@
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials14get_time_localEv">essentials::get_time_local (C++ function)</a>
 </li>
-      <li><a href="api/networkcommon.html#_CPPv4N10essentials23get_time_local_tostringEv">essentials::get_time_local_tostring (C++ function)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials23get_time_local_tostringEv">essentials::get_time_local_tostring (C++ function)</a>
+</li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials12get_time_utcEv">essentials::get_time_utc (C++ function)</a>
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials30get_time_utc_postgresql_formatEv">essentials::get_time_utc_postgresql_format (C++ function)</a>
@@ -350,10 +356,6 @@
       <li><a href="api/networkcommon.html#_CPPv4N10essentials21resolve_cmd_line_argsEPKc7int32_tA_PKcRK7qstringjR7qstringR7qstringR7qstringRN2fs4pathER7qstringR8uint16_tR7qstring">essentials::resolve_cmd_line_args (C++ function)</a>
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials11update_portEP8sockaddr8uint16_t">essentials::update_port (C++ function)</a>
-</li>
-      <li><a href="api/networkcommon.html#c.EV_PRINT_ELAPSED">EV_PRINT_ELAPSED (C macro)</a>
-</li>
-      <li><a href="api/networkcommon.html#c.EV_PRINT_ELAPSED_AND_CLEAR">EV_PRINT_ELAPSED_AND_CLEAR (C macro)</a>
 </li>
       <li><a href="api/networkcommon.html#c.EV_PRINT_IF_ELAPSED">EV_PRINT_IF_ELAPSED (C macro)</a>
 </li>
@@ -531,9 +533,9 @@
 </li>
       <li><a href="api/qh3server.html#_CPPv4N9qh3server9debug_logEPK7uint8_tPv">qh3server::debug_log (C++ function)</a>
 </li>
-      <li><a href="api/qh3server.html#_CPPv4N9qh3server18destroy_connectionEP7ev_loopP11conn_io_qh3">qh3server::destroy_connection (C++ function)</a>
+      <li><a href="api/qh3server.html#_CPPv4N9qh3server18destroy_connectionEP11conn_io_qh3">qh3server::destroy_connection (C++ function)</a>
 </li>
-      <li><a href="api/qh3server.html#_CPPv4N9qh3server12flush_egressEP7ev_loopP11conn_io_qh3">qh3server::flush_egress (C++ function)</a>
+      <li><a href="api/qh3server.html#_CPPv4N9qh3server12flush_egressEP11conn_io_qh3">qh3server::flush_egress (C++ function)</a>
 </li>
       <li><a href="api/qh3server.html#_CPPv4N9qh3server15for_each_headerEPK7uint8_t6size_tPK7uint8_t6size_tPv">qh3server::for_each_header (C++ function)</a>
 </li>
@@ -577,9 +579,11 @@
 </li>
       <li><a href="api/qh3server.html#_CPPv4N9qh3server7port_idE">qh3server::port_id (C++ member)</a>
 </li>
+      <li><a href="api/qh3server.html#_CPPv4N9qh3server7recv_cbEP9uv_poll_tii">qh3server::recv_cb (C++ function)</a>
+</li>
       <li><a href="api/qh3server.html#_CPPv4N9qh3server25relay_through_router_infoE">qh3server::relay_through_router_info (C++ member)</a>
 </li>
-      <li><a href="api/qh3server.html#_CPPv4N9qh3server14router_hb_loopER15qtimer_scedulerRK7qstringRK7qstringi8uint16_t">qh3server::router_hb_loop (C++ function)</a>
+      <li><a href="api/qh3server.html#_CPPv4N9qh3server14router_hb_loopER19qtimer_uv_schedulerRK7qstringRK7qstringi8uint16_t">qh3server::router_hb_loop (C++ function)</a>
 </li>
       <li><a href="api/qh3server.html#_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_t">qh3server::run (C++ function)</a>
 </li>
@@ -588,6 +592,8 @@
       <li><a href="api/qh3server.html#_CPPv4N9qh3server12stats_loggerE">qh3server::stats_logger (C++ member)</a>
 </li>
       <li><a href="api/qh3server.html#_CPPv4N9qh3server24stop_services_and_reportEi8uint16_t">qh3server::stop_services_and_report (C++ function)</a>
+</li>
+      <li><a href="api/qh3server.html#_CPPv4N9qh3server10timeout_cbEP10uv_timer_t">qh3server::timeout_cb (C++ function)</a>
 </li>
       <li><a href="api/qh3server.html#_CPPv4N9qh3server14validate_tokenEPK7uint8_t6size_tP16sockaddr_storage9socklen_tP7uint8_tP6size_t">qh3server::validate_token (C++ function)</a>
 </li>
@@ -713,10 +719,10 @@
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N6qmutex9blockedByE">qmutex::blockedBy (C++ member)</a>
 </li>
-      <li><a href="api/networkcommon.html#_CPPv4N6qmutex9conditionE">qmutex::condition (C++ member)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/networkcommon.html#_CPPv4N6qmutex9conditionE">qmutex::condition (C++ member)</a>
+</li>
       <li><a href="api/networkcommon.html#_CPPv4N6qmutex15conditionalWaitEPKc">qmutex::conditionalWait (C++ function)</a>
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N6qmutex16getMutexInternalEv">qmutex::getMutexInternal (C++ function)</a>
