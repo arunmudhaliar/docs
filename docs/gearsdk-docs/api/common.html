@@ -101,7 +101,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv45timer"><code class="docutils literal notranslate"><span class="pre">timer</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer4initEv"><code class="docutils literal notranslate"><span class="pre">timer::init()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer6updateEv"><code class="docutils literal notranslate"><span class="pre">timer::update()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer6updateEf"><code class="docutils literal notranslate"><span class="pre">timer::update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer6updateEd"><code class="docutils literal notranslate"><span class="pre">timer::update()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer5resetEv"><code class="docutils literal notranslate"><span class="pre">timer::reset()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer13get_dt_in_secEv"><code class="docutils literal notranslate"><span class="pre">timer::get_dt_in_sec()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer19get_dt_in_milli_secEv"><code class="docutils literal notranslate"><span class="pre">timer::get_dt_in_milli_sec()</span></code></a></li>
@@ -109,7 +109,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer16get_elapsed_timeEv"><code class="docutils literal notranslate"><span class="pre">timer::get_elapsed_time()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer23get_current_time_in_secEv"><code class="docutils literal notranslate"><span class="pre">timer::get_current_time_in_sec()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer29get_current_time_in_milli_secEv"><code class="docutils literal notranslate"><span class="pre">timer::get_current_time_in_milli_sec()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer14set_time_scaleEf"><code class="docutils literal notranslate"><span class="pre">timer::set_time_scale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer14set_time_scaleEd"><code class="docutils literal notranslate"><span class="pre">timer::set_time_scale()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer14get_time_scaleEv"><code class="docutils literal notranslate"><span class="pre">timer::get_time_scale()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer9timer_fpsE"><code class="docutils literal notranslate"><span class="pre">timer::timer_fps</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer15timer_dt_in_secE"><code class="docutils literal notranslate"><span class="pre">timer::timer_dt_in_sec</span></code></a></li>
@@ -120,6 +120,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer15timer_last_timeE"><code class="docutils literal notranslate"><span class="pre">timer::timer_last_time</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer17timer_frame_countE"><code class="docutils literal notranslate"><span class="pre">timer::timer_frame_count</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer16timer_time_scaleE"><code class="docutils literal notranslate"><span class="pre">timer::timer_time_scale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N5timer18MIN_FRAME_TIME_SECE"><code class="docutils literal notranslate"><span class="pre">timer::MIN_FRAME_TIME_SEC</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -685,8 +686,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5timer6updateEf">
-<span id="_CPPv3N5timer6updateEf"></span><span id="_CPPv2N5timer6updateEf"></span><span id="timer::update__float"></span><span class="target" id="d6/d88/classtimer_1a9081e67f08bfcdf7602757cdc7af638b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target_fps</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer6updateEf" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N5timer6updateEd">
+<span id="_CPPv3N5timer6updateEd"></span><span id="_CPPv2N5timer6updateEd"></span><span id="timer::update__double"></span><span class="target" id="d6/d88/classtimer_1abd58ea3c492ab20fc7791233c1ba7618"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target_fps</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer6updateEd" title="Link to this definition"></a><br /></dt>
 <dd><p>Updates the timer variables for each frame with a target FPS. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -703,7 +704,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer13get_dt_in_secEv">
-<span id="_CPPv3N5timer13get_dt_in_secEv"></span><span id="_CPPv2N5timer13get_dt_in_secEv"></span><span id="timer::get_dt_in_sec"></span><span class="target" id="d6/d88/classtimer_1ae2a18a1b9eb37fffc537f5b3bce568ec"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_dt_in_sec</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer13get_dt_in_secEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer13get_dt_in_secEv"></span><span id="_CPPv2N5timer13get_dt_in_secEv"></span><span id="timer::get_dt_in_sec"></span><span class="target" id="d6/d88/classtimer_1a2790dda3c3e3588811b5ed4be9251958"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_dt_in_sec</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer13get_dt_in_secEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Gets the delta time in seconds. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -725,7 +726,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer7get_fpsEv">
-<span id="_CPPv3N5timer7get_fpsEv"></span><span id="_CPPv2N5timer7get_fpsEv"></span><span id="timer::get_fps"></span><span class="target" id="d6/d88/classtimer_1acf1f37d6934d5c331bbb2c852e72b6ab"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_fps</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer7get_fpsEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer7get_fpsEv"></span><span id="_CPPv2N5timer7get_fpsEv"></span><span id="timer::get_fps"></span><span class="target" id="d6/d88/classtimer_1a284f8a4b3fa9c90826467743112f4169"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_fps</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer7get_fpsEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Gets the current frames per second. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -736,7 +737,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer16get_elapsed_timeEv">
-<span id="_CPPv3N5timer16get_elapsed_timeEv"></span><span id="_CPPv2N5timer16get_elapsed_timeEv"></span><span id="timer::get_elapsed_time"></span><span class="target" id="d6/d88/classtimer_1a846ad459376b51b4ef4f081ebc66021a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_elapsed_time</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer16get_elapsed_timeEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer16get_elapsed_timeEv"></span><span id="_CPPv2N5timer16get_elapsed_timeEv"></span><span id="timer::get_elapsed_time"></span><span class="target" id="d6/d88/classtimer_1a2096d864ef04d205b22cbaf953da37cc"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_elapsed_time</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer16get_elapsed_timeEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Gets the elapsed time in seconds since the timer was initialized. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -768,8 +769,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N5timer14set_time_scaleEf">
-<span id="_CPPv3N5timer14set_time_scaleEf"></span><span id="_CPPv2N5timer14set_time_scaleEf"></span><span id="timer::set_time_scale__float"></span><span class="target" id="d6/d88/classtimer_1ae344a9f2521c5b69868de9057354f050"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_time_scale</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timescale</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer14set_time_scaleEf" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N5timer14set_time_scaleEd">
+<span id="_CPPv3N5timer14set_time_scaleEd"></span><span id="_CPPv2N5timer14set_time_scaleEd"></span><span id="timer::set_time_scale__double"></span><span class="target" id="d6/d88/classtimer_1a47414b0362b00352e89b7e8d9477b4d4"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_time_scale</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timescale</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer14set_time_scaleEd" title="Link to this definition"></a><br /></dt>
 <dd><p>Sets the global time scale for the engine. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -780,7 +781,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer14get_time_scaleEv">
-<span id="_CPPv3N5timer14get_time_scaleEv"></span><span id="_CPPv2N5timer14get_time_scaleEv"></span><span id="timer::get_time_scale"></span><span class="target" id="d6/d88/classtimer_1a28c110f0a2cabdcec83b429c28a40928"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_time_scale</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer14get_time_scaleEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer14get_time_scaleEv"></span><span id="_CPPv2N5timer14get_time_scaleEv"></span><span id="timer::get_time_scale"></span><span class="target" id="d6/d88/classtimer_1a3f56759efc337aace3dd63c32d8dd4a9"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_time_scale</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5timer14get_time_scaleEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Gets the current global time scale. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -794,13 +795,13 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-attributes">Private Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer9timer_fpsE">
-<span id="_CPPv3N5timer9timer_fpsE"></span><span id="_CPPv2N5timer9timer_fpsE"></span><span id="timer::timer_fps__float"></span><span class="target" id="d6/d88/classtimer_1ab14b7da0efcdbf2e33a8280b1c085ac6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_fps</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><a class="headerlink" href="#_CPPv4N5timer9timer_fpsE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer9timer_fpsE"></span><span id="_CPPv2N5timer9timer_fpsE"></span><span id="timer::timer_fps__double"></span><span class="target" id="d6/d88/classtimer_1a9adff7bd9e9e1b9a4313888ff635eb5b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_fps</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N5timer9timer_fpsE" title="Link to this definition"></a><br /></dt>
 <dd><p>The current frames per second. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer15timer_dt_in_secE">
-<span id="_CPPv3N5timer15timer_dt_in_secE"></span><span id="_CPPv2N5timer15timer_dt_in_secE"></span><span id="timer::timer_dt_in_sec__float"></span><span class="target" id="d6/d88/classtimer_1a5d14b5db60d63cd8a68a0777065f12bb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_dt_in_sec</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><a class="headerlink" href="#_CPPv4N5timer15timer_dt_in_secE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer15timer_dt_in_secE"></span><span id="_CPPv2N5timer15timer_dt_in_secE"></span><span id="timer::timer_dt_in_sec__double"></span><span class="target" id="d6/d88/classtimer_1afad66b7223dbe81d86d5cca201ac9aa3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_dt_in_sec</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N5timer15timer_dt_in_secE" title="Link to this definition"></a><br /></dt>
 <dd><p>The delta time in seconds. </p>
 </dd></dl>
 
@@ -812,7 +813,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer25timer_elapsed_time_in_secE">
-<span id="_CPPv3N5timer25timer_elapsed_time_in_secE"></span><span id="_CPPv2N5timer25timer_elapsed_time_in_secE"></span><span id="timer::timer_elapsed_time_in_sec__float"></span><span class="target" id="d6/d88/classtimer_1ada7d7a5d24a5d604d379906d77450da3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_elapsed_time_in_sec</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><a class="headerlink" href="#_CPPv4N5timer25timer_elapsed_time_in_secE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer25timer_elapsed_time_in_secE"></span><span id="_CPPv2N5timer25timer_elapsed_time_in_secE"></span><span id="timer::timer_elapsed_time_in_sec__double"></span><span class="target" id="d6/d88/classtimer_1a4296966ebb46d42f374bac6dc6237e09"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_elapsed_time_in_sec</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N5timer25timer_elapsed_time_in_secE" title="Link to this definition"></a><br /></dt>
 <dd><p>The elapsed time in seconds since the timer was initialized. </p>
 </dd></dl>
 
@@ -824,13 +825,13 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer20timer_averaging_timeE">
-<span id="_CPPv3N5timer20timer_averaging_timeE"></span><span id="_CPPv2N5timer20timer_averaging_timeE"></span><span id="timer::timer_averaging_time__float"></span><span class="target" id="d6/d88/classtimer_1a1459ee686399d4a7f8c49cfe81da20e5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_averaging_time</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.5f</span></span><a class="headerlink" href="#_CPPv4N5timer20timer_averaging_timeE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer20timer_averaging_timeE"></span><span id="_CPPv2N5timer20timer_averaging_timeE"></span><span id="timer::timer_averaging_time__double"></span><span class="target" id="d6/d88/classtimer_1aeb53c8c483be28da11b9a5efaa5a6914"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_averaging_time</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.5</span></span><a class="headerlink" href="#_CPPv4N5timer20timer_averaging_timeE" title="Link to this definition"></a><br /></dt>
 <dd><p>The time over which to average the frame rate. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer15timer_last_timeE">
-<span id="_CPPv3N5timer15timer_last_timeE"></span><span id="_CPPv2N5timer15timer_last_timeE"></span><span id="timer::timer_last_time__double"></span><span class="target" id="d6/d88/classtimer_1a18b521d49cbf336f878594baf6081bb8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_last_time</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><a class="headerlink" href="#_CPPv4N5timer15timer_last_timeE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer15timer_last_timeE"></span><span id="_CPPv2N5timer15timer_last_timeE"></span><span id="timer::timer_last_time__double"></span><span class="target" id="d6/d88/classtimer_1a18b521d49cbf336f878594baf6081bb8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_last_time</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N5timer15timer_last_timeE" title="Link to this definition"></a><br /></dt>
 <dd><p>The last recorded time, used for internal calculations. </p>
 </dd></dl>
 
@@ -842,9 +843,14 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5timer16timer_time_scaleE">
-<span id="_CPPv3N5timer16timer_time_scaleE"></span><span id="_CPPv2N5timer16timer_time_scaleE"></span><span id="timer::timer_time_scale__float"></span><span class="target" id="d6/d88/classtimer_1a34e6cfa119415bda8d8bb86dba550305"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_time_scale</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><a class="headerlink" href="#_CPPv4N5timer16timer_time_scaleE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5timer16timer_time_scaleE"></span><span id="_CPPv2N5timer16timer_time_scaleE"></span><span id="timer::timer_time_scale__double"></span><span class="target" id="d6/d88/classtimer_1a50f626d7f15efc7141520a84de4119c3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer_time_scale</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N5timer16timer_time_scaleE" title="Link to this definition"></a><br /></dt>
 <dd><p>The global time scale for the engine. </p>
 </dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5timer18MIN_FRAME_TIME_SECE">
+<span id="_CPPv3N5timer18MIN_FRAME_TIME_SECE"></span><span id="_CPPv2N5timer18MIN_FRAME_TIME_SECE"></span><span id="timer::MIN_FRAME_TIME_SEC__double"></span><span class="target" id="d6/d88/classtimer_1a73d4da03fd77579386ddd1dff5eeb271"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MIN_FRAME_TIME_SEC</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.03</span></span><a class="headerlink" href="#_CPPv4N5timer18MIN_FRAME_TIME_SECE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>
@@ -1080,7 +1086,8 @@ This header file defines platform macros, utility macros, and functions for logg
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
 <span class="target" id="d4/d73/sdktypes_8hpp_1a39b995a28453bdbbb860e7d6126792d7"></span><span class="sig-name descname"><span class="pre">DECLSPEC</span> <span class="pre">void</span> <span class="pre">debug_assert_internal</span> <span class="pre">(const</span> <span class="pre">char</span> <span class="pre">*tag,</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*condition,</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*file,</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*function,</span> <span class="pre">int</span> <span class="pre">line,</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*format,...)</span></span></dt>
-<dd></dd></dl>
+<dd><p>Don’t use this function directly, instead use the macro ‘DEBUG_ASSERT’. </p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
