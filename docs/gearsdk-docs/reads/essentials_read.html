@@ -166,12 +166,12 @@
 <li><p><cite>qmutex()</cite>: Constructor.</p></li>
 <li><p><cite>~qmutex()</cite>: Destructor.</p></li>
 <li><p><cite>int init(const std::string&amp; name)</cite>: Initializes the mutex.</p></li>
-<li><p><cite>int tryLock(const char* lockedBy, const char* msg = nullptr)</cite>: Tries to lock the mutex.</p></li>
-<li><p><cite>int unLock(const char* msg = nullptr)</cite>: Unlocks the mutex.</p></li>
+<li><p><cite>int try_lock(const char* lockedBy, const char* msg = nullptr)</cite>: Tries to lock the mutex.</p></li>
+<li><p><cite>int unlock(const char* msg = nullptr)</cite>: Unlocks the mutex.</p></li>
 <li><p><cite>pthread_mutex_t* getMutexInternal()</cite>: Returns the internal mutex.</p></li>
-<li><p><cite>void conditionalWait(const char* waiting_at)</cite>: Waits conditionally.</p></li>
+<li><p><cite>void conditional_wait(const char* waiting_at)</cite>: Waits conditionally.</p></li>
 <li><p><cite>void block(const char* blockedBy = nullptr)</cite>: Blocks the mutex.</p></li>
-<li><p><cite>void unBlock(const char* unblockedBy)</cite>: Unblocks the mutex.</p></li>
+<li><p><cite>void unblock(const char* unblockedBy)</cite>: Unblocks the mutex.</p></li>
 </ul>
 </section>
 <section id="essentials">

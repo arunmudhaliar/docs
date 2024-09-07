@@ -141,6 +141,26 @@ sudo<span class="w"> </span>cmake<span class="w"> </span>--install<span class="w
 brew<span class="w"> </span>install<span class="w"> </span>pkg-config<span class="w"> </span><span class="c1"># Required for make to find gtest</span>
 </pre></div>
 </div>
+<p><strong>Build libuv</strong></p>
+<p>For building libuv from source, follow the below steps:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the libuv repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/libuv/libuv.git
+<span class="nb">cd</span><span class="w"> </span>libuv
+
+<span class="c1"># Set up the environment variables for the toolchain</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">NDK_PATH</span><span class="o">=</span>&lt;ndk<span class="w"> </span>path&gt;
+<span class="nb">export</span><span class="w"> </span><span class="nv">TOOLCHAIN</span><span class="o">=</span><span class="nv">$NDK_PATH</span>/build/cmake/android.toolchain.cmake
+
+<span class="c1"># Build the library for different architectures</span>
+cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_TOOLCHAIN_FILE<span class="o">=</span><span class="nv">$TOOLCHAIN</span><span class="w"> </span>-DANDROID_ABI<span class="o">=</span>armeabi-v7a<span class="w"> </span>-DANDROID_PLATFORM<span class="o">=</span>android-24
+cmake<span class="w"> </span>--build<span class="w"> </span>.
+
+<span class="c1"># Clean the build directory and follow the below steps for different architectures followed by &#39;cmake --build .&#39; command&#39;</span>
+cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_TOOLCHAIN_FILE<span class="o">=</span><span class="nv">$TOOLCHAIN</span><span class="w"> </span>-DANDROID_ABI<span class="o">=</span>arm64-v8a<span class="w"> </span>-DANDROID_PLATFORM<span class="o">=</span>android-24
+cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_TOOLCHAIN_FILE<span class="o">=</span><span class="nv">$TOOLCHAIN</span><span class="w"> </span>-DANDROID_ABI<span class="o">=</span>x86<span class="w"> </span>-DANDROID_PLATFORM<span class="o">=</span>android-24
+cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_TOOLCHAIN_FILE<span class="o">=</span><span class="nv">$TOOLCHAIN</span><span class="w"> </span>-DANDROID_ABI<span class="o">=</span>x86_64<span class="w"> </span>-DANDROID_PLATFORM<span class="o">=</span>android-24
+</pre></div>
+</div>
 </div>
 </section>
 
