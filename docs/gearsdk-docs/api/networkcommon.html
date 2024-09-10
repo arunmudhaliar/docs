@@ -119,6 +119,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N10essentials11update_portEP8sockaddr8uint16_t"><code class="docutils literal notranslate"><span class="pre">essentials::update_port()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N10essentials11mod_crc32_zE5uLongPK5Bytef8z_size_t"><code class="docutils literal notranslate"><span class="pre">essentials::mod_crc32_z()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N10essentials15get_json_stringERN9rapidjson8DocumentER7qstring"><code class="docutils literal notranslate"><span class="pre">essentials::get_json_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N10essentials27cleanup_and_destroy_uv_loopEP9uv_loop_t"><code class="docutils literal notranslate"><span class="pre">essentials::cleanup_and_destroy_uv_loop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N10essentials24close_uv_handle_callbackEP11uv_handle_tPv"><code class="docutils literal notranslate"><span class="pre">essentials::close_uv_handle_callback()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#_CPPv415conn_io_req_res"><code class="docutils literal notranslate"><span class="pre">conn_io_req_res</span></code></a><ul>
@@ -621,6 +623,19 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N10essentials15get_json_stringERN9rapidjson8DocumentER7qstring">
 <span id="_CPPv3N10essentials15get_json_stringERN9rapidjson8DocumentER7qstring"></span><span id="_CPPv2N10essentials15get_json_stringERN9rapidjson8DocumentER7qstring"></span><span id="essentials::get_json_string__rapidjson::DocumentR.qstringR"></span><span class="target" id="d8/def/classessentials_1ac76defbec6fe2af6802f6b1ddf8fc00b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_json_string</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">rapidjson</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Document</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">obj</span></span>, <a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">output</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10essentials15get_json_stringERN9rapidjson8DocumentER7qstring" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10essentials27cleanup_and_destroy_uv_loopEP9uv_loop_t">
+<span id="_CPPv3N10essentials27cleanup_and_destroy_uv_loopEP9uv_loop_t"></span><span id="_CPPv2N10essentials27cleanup_and_destroy_uv_loopEP9uv_loop_t"></span><span id="essentials::cleanup_and_destroy_uv_loop__uv_loop_tP"></span><span class="target" id="d8/def/classessentials_1ae37bca0a9e667f284fc317a19cea0c6d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cleanup_and_destroy_uv_loop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uv_loop_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">loop</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10essentials27cleanup_and_destroy_uv_loopEP9uv_loop_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-functions">Private Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10essentials24close_uv_handle_callbackEP11uv_handle_tPv">
+<span id="_CPPv3N10essentials24close_uv_handle_callbackEP11uv_handle_tPv"></span><span id="_CPPv2N10essentials24close_uv_handle_callbackEP11uv_handle_tPv"></span><span id="essentials::close_uv_handle_callback__uv_handle_tP.voidP"></span><span class="target" id="d8/def/classessentials_1a0d9597f2ac65dbb5a99d39c57cbc2dc2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close_uv_handle_callback</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uv_handle_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handle</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">arg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10essentials24close_uv_handle_callbackEP11uv_handle_tPv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
