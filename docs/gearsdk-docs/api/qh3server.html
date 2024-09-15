@@ -70,6 +70,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#_CPPv411connections"><code class="docutils literal notranslate"><span class="pre">connections</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections4sockE"><code class="docutils literal notranslate"><span class="pre">connections::sock</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections11poll_handleE"><code class="docutils literal notranslate"><span class="pre">connections::poll_handle</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections10udp_handleE"><code class="docutils literal notranslate"><span class="pre">connections::udp_handle</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections10local_addrE"><code class="docutils literal notranslate"><span class="pre">connections::local_addr</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections14local_addr_lenE"><code class="docutils literal notranslate"><span class="pre">connections::local_addr_len</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections1hE"><code class="docutils literal notranslate"><span class="pre">connections::h</span></code></a></li>
@@ -147,6 +149,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server9debug_logEPK7uint8_tPv"><code class="docutils literal notranslate"><span class="pre">qh3server::debug_log()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server7gen_cidEP7uint8_t6size_t"><code class="docutils literal notranslate"><span class="pre">qh3server::gen_cid()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server15for_each_headerEPK7uint8_t6size_tPK7uint8_t6size_tPv"><code class="docutils literal notranslate"><span class="pre">qh3server::for_each_header()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server7recv_cbEP9uv_poll_tii"><code class="docutils literal notranslate"><span class="pre">qh3server::recv_cb()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server10timeout_cbEP10uv_timer_t"><code class="docutils literal notranslate"><span class="pre">qh3server::timeout_cb()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -316,6 +320,16 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11connections4sockE">
 <span id="_CPPv3N11connections4sockE"></span><span id="_CPPv2N11connections4sockE"></span><span id="connections::sock__i"></span><span class="target" id="db/d9e/structconnections_1a25a21251f791b024544f7df1680ec37c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sock</span></span></span><a class="headerlink" href="#_CPPv4N11connections4sockE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11connections11poll_handleE">
+<span id="_CPPv3N11connections11poll_handleE"></span><span id="_CPPv2N11connections11poll_handleE"></span><span id="connections::poll_handle__uv_poll_t"></span><span class="target" id="db/d9e/structconnections_1a35988a67361d5c0bbd8b4e6059de7e1c"></span><span class="n"><span class="pre">uv_poll_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">poll_handle</span></span></span><a class="headerlink" href="#_CPPv4N11connections11poll_handleE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11connections10udp_handleE">
+<span id="_CPPv3N11connections10udp_handleE"></span><span id="_CPPv2N11connections10udp_handleE"></span><span id="connections::udp_handle__uv_udp_t"></span><span class="target" id="db/d9e/structconnections_1a93c0ae5e35f1f0534022ef4ab26d8aac"></span><span class="n"><span class="pre">uv_udp_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">udp_handle</span></span></span><a class="headerlink" href="#_CPPv4N11connections10udp_handleE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -705,13 +719,13 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp">
-<span class="target" id="d7/db9/classqh3server_1a373a90b7b257368a1b3aaf8a038c2202"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">recv_cb</span> <span class="pre">(EV_P_</span> <span class="pre">ev_io</span> <span class="pre">*w,</span> <span class="pre">int</span> <span class="pre">revents)</span></span></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server7recv_cbEP9uv_poll_tii">
+<span id="_CPPv3N9qh3server7recv_cbEP9uv_poll_tii"></span><span id="_CPPv2N9qh3server7recv_cbEP9uv_poll_tii"></span><span id="qh3server::recv_cb__uv_poll_tP.i.i"></span><span class="target" id="d7/db9/classqh3server_1a3f992d8d880dacb7f3016608655d1421"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv_cb</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uv_poll_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handle</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">status</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">events</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server7recv_cbEP9uv_poll_tii" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp">
-<span class="target" id="d7/db9/classqh3server_1a26bd7025afa3adaa5ac21a074db46b3c"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">timeout_cb</span> <span class="pre">(EV_P_</span> <span class="pre">ev_timer</span> <span class="pre">*w,</span> <span class="pre">int</span> <span class="pre">revents)</span></span></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server10timeout_cbEP10uv_timer_t">
+<span id="_CPPv3N9qh3server10timeout_cbEP10uv_timer_t"></span><span id="_CPPv2N9qh3server10timeout_cbEP10uv_timer_t"></span><span id="qh3server::timeout_cb__uv_timer_tP"></span><span class="target" id="d7/db9/classqh3server_1ab71ec69de11ba08720efb5628072fa2f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timeout_cb</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uv_timer_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server10timeout_cbEP10uv_timer_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
