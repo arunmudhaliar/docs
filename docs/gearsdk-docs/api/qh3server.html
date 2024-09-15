@@ -70,8 +70,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#_CPPv411connections"><code class="docutils literal notranslate"><span class="pre">connections</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections4sockE"><code class="docutils literal notranslate"><span class="pre">connections::sock</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections11poll_handleE"><code class="docutils literal notranslate"><span class="pre">connections::poll_handle</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections10udp_handleE"><code class="docutils literal notranslate"><span class="pre">connections::udp_handle</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections10local_addrE"><code class="docutils literal notranslate"><span class="pre">connections::local_addr</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections14local_addr_lenE"><code class="docutils literal notranslate"><span class="pre">connections::local_addr_len</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11connections1hE"><code class="docutils literal notranslate"><span class="pre">connections::h</span></code></a></li>
@@ -135,8 +133,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server14validate_tokenEPK7uint8_t6size_tP16sockaddr_storage9socklen_tP7uint8_tP6size_t"><code class="docutils literal notranslate"><span class="pre">qh3server::validate_token()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server11create_connEP7uint8_t6size_tP7uint8_t6size_tP8sockaddr9socklen_tP16sockaddr_storage9socklen_tP16sockaddr_storage"><code class="docutils literal notranslate"><span class="pre">qh3server::create_conn()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server14send_in_chunksEP11conn_io_qh3"><code class="docutils literal notranslate"><span class="pre">qh3server::send_in_chunks()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server14router_hb_loopER19qtimer_uv_schedulerRK7qstringRK7qstringi8uint16_t"><code class="docutils literal notranslate"><span class="pre">qh3server::router_hb_loop()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server24stop_services_and_reportEi8uint16_t"><code class="docutils literal notranslate"><span class="pre">qh3server::stop_services_and_report()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server27destroy_pending_connectionsEv"><code class="docutils literal notranslate"><span class="pre">qh3server::destroy_pending_connections()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server14router_hb_loopER20TIMER_SCHEDuLER_TYPERK7qstringRK7qstringi8uint16_t"><code class="docutils literal notranslate"><span class="pre">qh3server::router_hb_loop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server31dangling_connections_check_loopER20TIMER_SCHEDuLER_TYPEf"><code class="docutils literal notranslate"><span class="pre">qh3server::dangling_connections_check_loop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server24stop_services_and_reportEi8uint16_tf"><code class="docutils literal notranslate"><span class="pre">qh3server::stop_services_and_report()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server6configE"><code class="docutils literal notranslate"><span class="pre">qh3server::config</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server12http3_configE"><code class="docutils literal notranslate"><span class="pre">qh3server::http3_config</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server5connsE"><code class="docutils literal notranslate"><span class="pre">qh3server::conns</span></code></a></li>
@@ -147,8 +147,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server9debug_logEPK7uint8_tPv"><code class="docutils literal notranslate"><span class="pre">qh3server::debug_log()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server7gen_cidEP7uint8_t6size_t"><code class="docutils literal notranslate"><span class="pre">qh3server::gen_cid()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server15for_each_headerEPK7uint8_t6size_tPK7uint8_t6size_tPv"><code class="docutils literal notranslate"><span class="pre">qh3server::for_each_header()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server7recv_cbEP9uv_poll_tii"><code class="docutils literal notranslate"><span class="pre">qh3server::recv_cb()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server10timeout_cbEP10uv_timer_t"><code class="docutils literal notranslate"><span class="pre">qh3server::timeout_cb()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -201,6 +199,11 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
 <dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.USE_UV_MAIN_LOOP">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a94bc4f02753b3db6d6ab73563474e68f"></span><span class="sig-name descname"><span class="n"><span class="pre">USE_UV_MAIN_LOOP</span></span></span><a class="headerlink" href="#c.USE_UV_MAIN_LOOP" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.__LOGTAG__">
 <span class="target" id="d0/d9d/qh3server_8hpp_1a51a7b4cddb25f82f90871c021c988b9c"></span><span class="sig-name descname"><span class="n"><span class="pre">__LOGTAG__</span></span></span><br /></dt>
 <dd></dd></dl>
@@ -240,6 +243,26 @@
 <span class="target" id="d0/d9d/qh3server_8hpp_1aece27114dc06ffbd6a3d038ba018cf67"></span><span class="sig-name descname"><span class="n"><span class="pre">DEFAULT_TIMER_ROUTER_HB_INTERVAL_IN_SECONDS</span></span></span><a class="headerlink" href="#c.DEFAULT_TIMER_ROUTER_HB_INTERVAL_IN_SECONDS" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.EVENT_LOOP_TYPE">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a2fd12c43962f8f04c30629c65e20e3a2"></span><span class="sig-name descname"><span class="n"><span class="pre">EVENT_LOOP_TYPE</span></span></span><a class="headerlink" href="#c.EVENT_LOOP_TYPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.EVENT_TIMER_TYPE">
+<span class="target" id="d0/d9d/qh3server_8hpp_1af8d1a8f097c1671de486a5a74002857d"></span><span class="sig-name descname"><span class="n"><span class="pre">EVENT_TIMER_TYPE</span></span></span><a class="headerlink" href="#c.EVENT_TIMER_TYPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TIMER_SCHEDuLER_TYPE">
+<span class="target" id="d0/d9d/qh3server_8hpp_1ad7f1e1af7b4877b856b8a68ba1dff827"></span><span class="sig-name descname"><span class="n"><span class="pre">TIMER_SCHEDuLER_TYPE</span></span></span><a class="headerlink" href="#c.TIMER_SCHEDuLER_TYPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TIMER_TYPE">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a16d3e6f912a65db8b33fd7d4d5dc22ac"></span><span class="sig-name descname"><span class="n"><span class="pre">TIMER_TYPE</span></span></span><a class="headerlink" href="#c.TIMER_TYPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
 </div>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv420bridge_h3_connection">
@@ -259,7 +282,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N20bridge_h3_connection12get_mainloopEv">
-<span id="_CPPv3N20bridge_h3_connection12get_mainloopEv"></span><span id="_CPPv2N20bridge_h3_connection12get_mainloopEv"></span><span id="bridge_h3_connection::get_mainloop"></span><span class="target" id="db/da6/classbridge__h3__connection_1a5674036bd89ab6af06bdf9297aa5cb71"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uv_loop_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_mainloop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N20bridge_h3_connection12get_mainloopEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N20bridge_h3_connection12get_mainloopEv"></span><span id="_CPPv2N20bridge_h3_connection12get_mainloopEv"></span><span id="bridge_h3_connection::get_mainloop"></span><span class="target" id="db/da6/classbridge__h3__connection_1ad2d64447a8688f303c726b314046d63d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">EVENT_LOOP_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_mainloop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N20bridge_h3_connection12get_mainloopEv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -293,16 +316,6 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11connections4sockE">
 <span id="_CPPv3N11connections4sockE"></span><span id="_CPPv2N11connections4sockE"></span><span id="connections::sock__i"></span><span class="target" id="db/d9e/structconnections_1a25a21251f791b024544f7df1680ec37c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sock</span></span></span><a class="headerlink" href="#_CPPv4N11connections4sockE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N11connections11poll_handleE">
-<span id="_CPPv3N11connections11poll_handleE"></span><span id="_CPPv2N11connections11poll_handleE"></span><span id="connections::poll_handle__uv_poll_t"></span><span class="target" id="db/d9e/structconnections_1a35988a67361d5c0bbd8b4e6059de7e1c"></span><span class="n"><span class="pre">uv_poll_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">poll_handle</span></span></span><a class="headerlink" href="#_CPPv4N11connections11poll_handleE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N11connections10udp_handleE">
-<span id="_CPPv3N11connections10udp_handleE"></span><span id="_CPPv2N11connections10udp_handleE"></span><span id="connections::udp_handle__uv_udp_t"></span><span class="target" id="db/d9e/structconnections_1a93c0ae5e35f1f0534022ef4ab26d8aac"></span><span class="n"><span class="pre">uv_udp_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">udp_handle</span></span></span><a class="headerlink" href="#_CPPv4N11connections10udp_handleE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -353,7 +366,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N11conn_io_qh35timerE">
-<span id="_CPPv3N11conn_io_qh35timerE"></span><span id="_CPPv2N11conn_io_qh35timerE"></span><span id="conn_io_qh3::timer__uv_timer_t"></span><span class="target" id="d8/d84/structconn__io__qh3_1a42b24663c15ddc787a6a965794605809"></span><span class="n"><span class="pre">uv_timer_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer</span></span></span><a class="headerlink" href="#_CPPv4N11conn_io_qh35timerE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N11conn_io_qh35timerE"></span><span id="_CPPv2N11conn_io_qh35timerE"></span><span id="conn_io_qh3::timer__EVENT_TIMER_TYPE"></span><span class="target" id="d8/d84/structconn__io__qh3_1a3ed697ec69564b852078697dedc6f5c6"></span><span class="n"><span class="pre">EVENT_TIMER_TYPE</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timer</span></span></span><a class="headerlink" href="#_CPPv4N11conn_io_qh35timerE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -577,7 +590,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9qh3server12get_mainloopEv">
-<span id="_CPPv3N9qh3server12get_mainloopEv"></span><span id="_CPPv2N9qh3server12get_mainloopEv"></span><span id="qh3server::get_mainloop"></span><span class="target" id="d7/db9/classqh3server_1a2ef5fb6ea74aa4b2fc3ee2643401e501"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">uv_loop_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_mainloop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">final</span></span><a class="headerlink" href="#_CPPv4N9qh3server12get_mainloopEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N9qh3server12get_mainloopEv"></span><span id="_CPPv2N9qh3server12get_mainloopEv"></span><span id="qh3server::get_mainloop"></span><span class="target" id="d7/db9/classqh3server_1acf7a3e9f7da887a86fb620841e43fba4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">EVENT_LOOP_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_mainloop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">final</span></span><a class="headerlink" href="#_CPPv4N9qh3server12get_mainloopEv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -616,13 +629,23 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9qh3server14router_hb_loopER19qtimer_uv_schedulerRK7qstringRK7qstringi8uint16_t">
-<span id="_CPPv3N9qh3server14router_hb_loopER19qtimer_uv_schedulerRK7qstringRK7qstringi8uint16_t"></span><span id="_CPPv2N9qh3server14router_hb_loopER19qtimer_uv_schedulerRK7qstringRK7qstringi8uint16_t"></span><span id="qh3server::router_hb_loop__qtimer_uv_schedulerR.qstringCR.qstringCR.i.uint16_t"></span><span class="target" id="d7/db9/classqh3server_1a39db789be0941a25d4bfe57ac1d1bb5c"></span><span class="n"><span class="pre">qtimer_uv</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">router_hb_loop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">qtimer_uv_scheduler</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">router_hb_scheduler</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">port</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sock</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command_center_feedback_port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server14router_hb_loopER19qtimer_uv_schedulerRK7qstringRK7qstringi8uint16_t" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server27destroy_pending_connectionsEv">
+<span id="_CPPv3N9qh3server27destroy_pending_connectionsEv"></span><span id="_CPPv2N9qh3server27destroy_pending_connectionsEv"></span><span id="qh3server::destroy_pending_connections"></span><span class="target" id="d7/db9/classqh3server_1ab4018a6b426179f79d8a45fa9d7e69a1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroy_pending_connections</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server27destroy_pending_connectionsEv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9qh3server24stop_services_and_reportEi8uint16_t">
-<span id="_CPPv3N9qh3server24stop_services_and_reportEi8uint16_t"></span><span id="_CPPv2N9qh3server24stop_services_and_reportEi8uint16_t"></span><span id="qh3server::stop_services_and_report__i.uint16_t"></span><span class="target" id="d7/db9/classqh3server_1ab290b2e4fd8c0ab865e70bed11ebaa3e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop_services_and_report</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sock</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command_center_feedback_port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server24stop_services_and_reportEi8uint16_t" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server14router_hb_loopER20TIMER_SCHEDuLER_TYPERK7qstringRK7qstringi8uint16_t">
+<span id="_CPPv3N9qh3server14router_hb_loopER20TIMER_SCHEDuLER_TYPERK7qstringRK7qstringi8uint16_t"></span><span id="_CPPv2N9qh3server14router_hb_loopER20TIMER_SCHEDuLER_TYPERK7qstringRK7qstringi8uint16_t"></span><span id="qh3server::router_hb_loop__TIMER_SCHEDuLER_TYPER.qstringCR.qstringCR.i.uint16_t"></span><span class="target" id="d7/db9/classqh3server_1a240246e8cdeeaa5762d9ac0d6c80f712"></span><span class="n"><span class="pre">TIMER_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">router_hb_loop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TIMER_SCHEDuLER_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">router_hb_scheduler</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">port</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sock</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command_center_feedback_port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server14router_hb_loopER20TIMER_SCHEDuLER_TYPERK7qstringRK7qstringi8uint16_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server31dangling_connections_check_loopER20TIMER_SCHEDuLER_TYPEf">
+<span id="_CPPv3N9qh3server31dangling_connections_check_loopER20TIMER_SCHEDuLER_TYPEf"></span><span id="_CPPv2N9qh3server31dangling_connections_check_loopER20TIMER_SCHEDuLER_TYPEf"></span><span id="qh3server::dangling_connections_check_loop__TIMER_SCHEDuLER_TYPER.float"></span><span class="target" id="d7/db9/classqh3server_1ab4d6bbe125e3b8b81f60cbecb6778285"></span><span class="n"><span class="pre">TIMER_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">dangling_connections_check_loop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TIMER_SCHEDuLER_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">close_dangling_connections_scheduler</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">interval</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server31dangling_connections_check_loopER20TIMER_SCHEDuLER_TYPEf" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server24stop_services_and_reportEi8uint16_tf">
+<span id="_CPPv3N9qh3server24stop_services_and_reportEi8uint16_tf"></span><span id="_CPPv2N9qh3server24stop_services_and_reportEi8uint16_tf"></span><span id="qh3server::stop_services_and_report__i.uint16_t.float"></span><span class="target" id="d7/db9/classqh3server_1ae33ba31a5754ac527330ef6bfb988569"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop_services_and_report</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sock</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command_center_feedback_port</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">interval</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server24stop_services_and_reportEi8uint16_tf" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -645,7 +668,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9qh3server8mainloopE">
-<span id="_CPPv3N9qh3server8mainloopE"></span><span id="_CPPv2N9qh3server8mainloopE"></span><span id="qh3server::mainloop__uv_loop_tP"></span><span class="target" id="d7/db9/classqh3server_1a0187138befbf46eff960cb73fb566375"></span><span class="n"><span class="pre">uv_loop_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">mainloop</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N9qh3server8mainloopE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N9qh3server8mainloopE"></span><span id="_CPPv2N9qh3server8mainloopE"></span><span id="qh3server::mainloop__EVENT_LOOP_TYPEP"></span><span class="target" id="d7/db9/classqh3server_1a1b8a6929da78f991517c2bba222be7dd"></span><span class="n"><span class="pre">EVENT_LOOP_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">mainloop</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N9qh3server8mainloopE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -682,13 +705,13 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9qh3server7recv_cbEP9uv_poll_tii">
-<span id="_CPPv3N9qh3server7recv_cbEP9uv_poll_tii"></span><span id="_CPPv2N9qh3server7recv_cbEP9uv_poll_tii"></span><span id="qh3server::recv_cb__uv_poll_tP.i.i"></span><span class="target" id="d7/db9/classqh3server_1a3f992d8d880dacb7f3016608655d1421"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">recv_cb</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uv_poll_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handle</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">status</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">events</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server7recv_cbEP9uv_poll_tii" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="d7/db9/classqh3server_1a373a90b7b257368a1b3aaf8a038c2202"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">recv_cb</span> <span class="pre">(EV_P_</span> <span class="pre">ev_io</span> <span class="pre">*w,</span> <span class="pre">int</span> <span class="pre">revents)</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9qh3server10timeout_cbEP10uv_timer_t">
-<span id="_CPPv3N9qh3server10timeout_cbEP10uv_timer_t"></span><span id="_CPPv2N9qh3server10timeout_cbEP10uv_timer_t"></span><span id="qh3server::timeout_cb__uv_timer_tP"></span><span class="target" id="d7/db9/classqh3server_1ab71ec69de11ba08720efb5628072fa2f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timeout_cb</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uv_timer_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server10timeout_cbEP10uv_timer_t" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp">
+<span class="target" id="d7/db9/classqh3server_1a26bd7025afa3adaa5ac21a074db46b3c"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">void</span> <span class="pre">timeout_cb</span> <span class="pre">(EV_P_</span> <span class="pre">ev_timer</span> <span class="pre">*w,</span> <span class="pre">int</span> <span class="pre">revents)</span></span></dt>
 <dd></dd></dl>
 
 </div>

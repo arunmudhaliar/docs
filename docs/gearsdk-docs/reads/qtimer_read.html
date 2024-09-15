@@ -102,9 +102,9 @@
              
   <section id="qtimer-hpp-and-qtimer-cpp">
 <span id="qtimer-hpp"></span><h1>qtimer.hpp and qtimer.cpp<a class="headerlink" href="#qtimer-hpp-and-qtimer-cpp" title="Link to this heading"></a></h1>
-<p>The <cite>qtimer</cite> and <cite>qtimer_sceduler</cite> classes are designed for managing and scheduling timers using the <cite>libev</cite> event loop. The <cite>qtimer</cite> class represents a single timer, while the <cite>qtimer_sceduler</cite> class handles the scheduling and management of multiple timers.</p>
+<p>The <cite>qtimer</cite> and <cite>qtimer_scheduler</cite> classes are designed for managing and scheduling timers using the <cite>libev</cite> event loop. The <cite>qtimer</cite> class represents a single timer, while the <cite>qtimer_scheduler</cite> class handles the scheduling and management of multiple timers.</p>
 <p><strong>Header File: `qtimer.hpp`</strong></p>
-<p>The header file defines two classes: <cite>qtimer</cite> and <cite>qtimer_sceduler</cite>.</p>
+<p>The header file defines two classes: <cite>qtimer</cite> and <cite>qtimer_scheduler</cite>.</p>
 <p><strong>Class: `qtimer`</strong></p>
 <p>The <cite>qtimer</cite> class provides functionalities to create and manage timers. Key components include:</p>
 <ul class="simple">
@@ -121,14 +121,14 @@
 - <strong>`float delay`</strong>: Time interval between timer events.
 - <strong>`void* data`</strong>: User-defined data passed to the callback.</p></li>
 </ul>
-<p><strong>Class: `qtimer_sceduler`</strong></p>
-<p>The <cite>qtimer_sceduler</cite> class manages a collection of <cite>qtimer</cite> instances. Key components include:</p>
+<p><strong>Class: `qtimer_scheduler`</strong></p>
+<p>The <cite>qtimer_scheduler</cite> class manages a collection of <cite>qtimer</cite> instances. Key components include:</p>
 <ul class="simple">
 <li><p><strong>Constructor and Destructor</strong>
-- <strong>`qtimer_sceduler()`</strong>: Initializes the scheduler.
-- <strong>`virtual ~qtimer_sceduler()`</strong>: Cleans up all managed timers.</p></li>
+- <strong>`qtimer_scheduler()`</strong>: Initializes the scheduler.
+- <strong>`virtual ~qtimer_scheduler()`</strong>: Cleans up all managed timers.</p></li>
 <li><p><strong>Methods</strong>
-- <strong>`void set_ev_lopp(struct ev_loop* loop)`</strong>: Sets the event loop for the scheduler.
+- <strong>`void set_loop(struct ev_loop* loop)`</strong>: Sets the event loop for the scheduler.
 - <strong>`qtimer* schedule_timer(type_qtimer_cb timeout_callback, float delay, void* data = nullptr)`</strong>: Schedules a one-time timer.
 - <strong>`qtimer* schedule_count_timer(type_qtimer_cb timeout_callback, float delay, int count, void* data = nullptr)`</strong>: Schedules a timer that fires a specified number of times.
 - <strong>`qtimer* schedule_repeat_timer(type_qtimer_cb timeout_callback, float delay, void* data = nullptr)`</strong>: Schedules a repeating timer.
@@ -138,7 +138,7 @@
 - <strong>`void shutdown_mainloop()`</strong>: Breaks out of the event loop.</p></li>
 </ul>
 <p><strong>Example Usage</strong></p>
-<p>Here’s a simple example demonstrating how to use the <cite>qtimer</cite> and <cite>qtimer_sceduler</cite> classes:</p>
+<p>Here’s a simple example demonstrating how to use the <cite>qtimer</cite> and <cite>qtimer_scheduler</cite> classes:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;qtimer.hpp&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ev.h&gt;</span>
 
@@ -148,8 +148,8 @@
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">ev_loop</span><span class="o">*</span><span class="w"> </span><span class="n">loop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ev_default_loop</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="w">    </span><span class="n">qtimer_sceduler</span><span class="w"> </span><span class="n">scheduler</span><span class="p">;</span>
-<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="n">set_ev_lopp</span><span class="p">(</span><span class="n">loop</span><span class="p">);</span>
+<span class="w">    </span><span class="n">qtimer_scheduler</span><span class="w"> </span><span class="n">scheduler</span><span class="p">;</span>
+<span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="n">set_loop</span><span class="p">(</span><span class="n">loop</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// Schedule a one-time timer</span>
 <span class="w">    </span><span class="n">scheduler</span><span class="p">.</span><span class="n">schedule_timer</span><span class="p">([](</span><span class="n">qtimer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">timer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -171,7 +171,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This example demonstrates the creation of a <cite>qtimer_sceduler</cite>, setting an event loop, and scheduling various types of timers.</p>
+<p>This example demonstrates the creation of a <cite>qtimer_scheduler</cite>, setting an event loop, and scheduling various types of timers.</p>
 </section>
 
 
