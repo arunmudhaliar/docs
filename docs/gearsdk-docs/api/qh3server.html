@@ -96,6 +96,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11conn_io_qh39stream_idE"><code class="docutils literal notranslate"><span class="pre">conn_io_qh3::stream_id</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11conn_io_qh333original_client_serialised_bufferE"><code class="docutils literal notranslate"><span class="pre">conn_io_qh3::original_client_serialised_buffer</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11conn_io_qh312cid_hash_valE"><code class="docutils literal notranslate"><span class="pre">conn_io_qh3::cid_hash_val</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N11conn_io_qh320skip_destroy_counterE"><code class="docutils literal notranslate"><span class="pre">conn_io_qh3::skip_destroy_counter</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#_CPPv410routerinfo"><code class="docutils literal notranslate"><span class="pre">routerinfo</span></code></a><ul>
@@ -111,6 +112,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3serverD0Ev"><code class="docutils literal notranslate"><span class="pre">qh3server::~qh3server()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server15get_file_loggerEv"><code class="docutils literal notranslate"><span class="pre">qh3server::get_file_logger()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server17get_stats_loggeerEv"><code class="docutils literal notranslate"><span class="pre">qh3server::get_stats_loggeer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server25get_live_connection_countEv"><code class="docutils literal notranslate"><span class="pre">qh3server::get_live_connection_count()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_t"><code class="docutils literal notranslate"><span class="pre">qh3server::run()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server18on_server_pre_initEv"><code class="docutils literal notranslate"><span class="pre">qh3server::on_server_pre_init()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server22on_server_uninitialiseEv"><code class="docutils literal notranslate"><span class="pre">qh3server::on_server_uninitialise()</span></code></a></li>
@@ -444,6 +446,11 @@
 <span id="_CPPv3N11conn_io_qh312cid_hash_valE"></span><span id="_CPPv2N11conn_io_qh312cid_hash_valE"></span><span id="conn_io_qh3::cid_hash_val__unsigned"></span><span class="target" id="d8/d84/structconn__io__qh3_1a0eeb754045aa2f7f4ca02897d9ae82e9"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cid_hash_val</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N11conn_io_qh312cid_hash_valE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11conn_io_qh320skip_destroy_counterE">
+<span id="_CPPv3N11conn_io_qh320skip_destroy_counterE"></span><span id="_CPPv2N11conn_io_qh320skip_destroy_counterE"></span><span id="conn_io_qh3::skip_destroy_counter__uint8_t"></span><span class="target" id="d8/d84/structconn__io__qh3_1a5dc3592abf2e2a847d87fa8cf7c0f121"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">skip_destroy_counter</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N11conn_io_qh320skip_destroy_counterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
 </div>
 </dd></dl>
 
@@ -507,6 +514,11 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9qh3server17get_stats_loggeerEv">
 <span id="_CPPv3N9qh3server17get_stats_loggeerEv"></span><span id="_CPPv2N9qh3server17get_stats_loggeerEv"></span><span id="qh3server::get_stats_loggeer"></span><span class="target" id="d7/db9/classqh3server_1a1b9cfdb5fec9c03b7c97de527cb3850c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">qstatslogger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_stats_loggeer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server17get_stats_loggeerEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server25get_live_connection_countEv">
+<span id="_CPPv3N9qh3server25get_live_connection_countEv"></span><span id="_CPPv2N9qh3server25get_live_connection_countEv"></span><span id="qh3server::get_live_connection_count"></span><span class="target" id="d7/db9/classqh3server_1a1905d93d4bf5d3526d204f853e6c4ccf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_live_connection_count</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server25get_live_connection_countEv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
