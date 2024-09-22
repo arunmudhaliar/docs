@@ -162,6 +162,28 @@ cmake<span class="w"> </span>..<span class="w"> </span>-DCMAKE_TOOLCHAIN_FILE<sp
 </pre></div>
 </div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<dl class="simple">
+<dt><strong>Pre-requisites to setup dev environment using VSCode in linux</strong>:</dt><dd><p>For building libuv from source, follow the below steps:</p>
+</dd>
+</dl>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># May need administrative privillage, if so use &#39;sudo&#39;</span>
+<span class="c1"># Ex: sudo apt-get update &amp;&amp; apt-get install make</span>
+apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>make
+apt-get<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>-y
+apt-get<span class="w"> </span>install<span class="w"> </span>libssl-dev<span class="w"> </span>-y
+apt-get<span class="w"> </span>install<span class="w"> </span>libsasl2-dev<span class="w"> </span>-y
+apt<span class="w"> </span>install<span class="w"> </span>libsnappy-dev<span class="w"> </span>-y
+apt-get<span class="w"> </span>install<span class="w"> </span>libzstd-dev<span class="w"> </span>-y
+apt<span class="w"> </span>install<span class="w"> </span>iproute2<span class="w"> </span>-y
+apt-get<span class="w"> </span>install<span class="w"> </span>libcurl4-openssl-dev<span class="w"> </span>-y
+</pre></div>
+</div>
+<p><strong>Install lldb-mi</strong></p>
+<p><a class="reference external" href="https://github.com/lldb-tools/lldb-mi">https://github.com/lldb-tools/lldb-mi</a></p>
+<p>Download the lldb-mi from the above git link and follow the instructions to build. VScode requires ‘lldb-mi’ for debugging.</p>
+</div>
 </section>
 
 
