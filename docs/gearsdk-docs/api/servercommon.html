@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,23 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>servercommon &mdash; gearsdk 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b1be9f46" />
       <link rel="stylesheet" type="text/css" href="../_static/styles.css?v=b75bc61f" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=2709fde1"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -76,12 +74,17 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv46qmongo"><code class="docutils literal notranslate"><span class="pre">qmongo</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo36type_qmongo_findupdate_find_query_cbE"><code class="docutils literal notranslate"><span class="pre">qmongo::type_qmongo_findupdate_find_query_cb</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo38type_qmongo_findupdate_update_query_cbE"><code class="docutils literal notranslate"><span class="pre">qmongo::type_qmongo_findupdate_update_query_cb</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo38type_qmongo_findupdate_insert_query_cbE"><code class="docutils literal notranslate"><span class="pre">qmongo::type_qmongo_findupdate_insert_query_cb</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo6qmongoEP27interface_qmongo_connectionRK7qstringRK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">qmongo::qmongo()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongoD0Ev"><code class="docutils literal notranslate"><span class="pre">qmongo::~qmongo()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo7cleanupEv"><code class="docutils literal notranslate"><span class="pre">qmongo::cleanup()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo6insertERK7qstringR6bson_t"><code class="docutils literal notranslate"><span class="pre">qmongo::insert()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo6updateERK7qstringR6bson_tR6bson_t"><code class="docutils literal notranslate"><span class="pre">qmongo::update()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo4findERK7qstringR6bson_t"><code class="docutils literal notranslate"><span class="pre">qmongo::find()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo15find_and_updateERK7qstringRK7qstringRK7qstring38type_qmongo_findupdate_update_query_cb"><code class="docutils literal notranslate"><span class="pre">qmongo::find_and_update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo15find_and_upsertERK7qstring36type_qmongo_findupdate_find_query_cb38type_qmongo_findupdate_update_query_cb38type_qmongo_findupdate_insert_query_cb"><code class="docutils literal notranslate"><span class="pre">qmongo::find_and_upsert()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo14get_collectionERK7qstring"><code class="docutils literal notranslate"><span class="pre">qmongo::get_collection()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo7connectEv"><code class="docutils literal notranslate"><span class="pre">qmongo::connect()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6qmongo6qmongoEv"><code class="docutils literal notranslate"><span class="pre">qmongo::qmongo()</span></code></a></li>
@@ -273,6 +276,24 @@
 <em>#include &lt;qmongo.hpp&gt;</em></div>
 <p>A class for interacting with MongoDB using the qmongo library. </p>
 <div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N6qmongo36type_qmongo_findupdate_find_query_cbE">
+<span id="_CPPv3N6qmongo36type_qmongo_findupdate_find_query_cbE"></span><span id="_CPPv2N6qmongo36type_qmongo_findupdate_find_query_cbE"></span><span id="qmongo::type_qmongo_findupdate_find_query_cb"></span><span class="target" id="d8/dff/classqmongo_1ab5dfdedabb94041c0393d12eca43680a"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">bson_t</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type_qmongo_findupdate_find_query_cb</span></span></span><a class="headerlink" href="#_CPPv4N6qmongo36type_qmongo_findupdate_find_query_cbE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N6qmongo38type_qmongo_findupdate_update_query_cbE">
+<span id="_CPPv3N6qmongo38type_qmongo_findupdate_update_query_cbE"></span><span id="_CPPv2N6qmongo38type_qmongo_findupdate_update_query_cbE"></span><span id="qmongo::type_qmongo_findupdate_update_query_cb"></span><span class="target" id="d8/dff/classqmongo_1a587df3b38394f9553b7a8eba49bbd289"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">bson_t</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type_qmongo_findupdate_update_query_cb</span></span></span><a class="headerlink" href="#_CPPv4N6qmongo38type_qmongo_findupdate_update_query_cbE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N6qmongo38type_qmongo_findupdate_insert_query_cbE">
+<span id="_CPPv3N6qmongo38type_qmongo_findupdate_insert_query_cbE"></span><span id="_CPPv2N6qmongo38type_qmongo_findupdate_insert_query_cbE"></span><span id="qmongo::type_qmongo_findupdate_insert_query_cb"></span><span class="target" id="d8/dff/classqmongo_1ae691ad9939ef912a403c3c5b550c18b7"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">bson_t</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type_qmongo_findupdate_insert_query_cb</span></span></span><a class="headerlink" href="#_CPPv4N6qmongo38type_qmongo_findupdate_insert_query_cbE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6qmongo6qmongoEP27interface_qmongo_connectionRK7qstringRK7qstringRK7qstring">
@@ -353,6 +374,16 @@
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6qmongo15find_and_updateERK7qstringRK7qstringRK7qstring38type_qmongo_findupdate_update_query_cb">
+<span id="_CPPv3N6qmongo15find_and_updateERK7qstringRK7qstringRK7qstring38type_qmongo_findupdate_update_query_cb"></span><span id="_CPPv2N6qmongo15find_and_updateERK7qstringRK7qstringRK7qstring38type_qmongo_findupdate_update_query_cb"></span><span id="qmongo::find_and_update__qstringCR.qstringCR.qstringCR.type_qmongo_findupdate_update_query_cb"></span><span class="target" id="d8/dff/classqmongo_1a14b241bfb586a272fcd2f21dacc46cfe"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_and_update</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">collection_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">search_field</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">search_value</span></span>, <a class="reference internal" href="#_CPPv4N6qmongo38type_qmongo_findupdate_update_query_cbE" title="qmongo::type_qmongo_findupdate_update_query_cb"><span class="n"><span class="pre">type_qmongo_findupdate_update_query_cb</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">update_query_cb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6qmongo15find_and_updateERK7qstringRK7qstringRK7qstring38type_qmongo_findupdate_update_query_cb" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6qmongo15find_and_upsertERK7qstring36type_qmongo_findupdate_find_query_cb38type_qmongo_findupdate_update_query_cb38type_qmongo_findupdate_insert_query_cb">
+<span id="_CPPv3N6qmongo15find_and_upsertERK7qstring36type_qmongo_findupdate_find_query_cb38type_qmongo_findupdate_update_query_cb38type_qmongo_findupdate_insert_query_cb"></span><span id="_CPPv2N6qmongo15find_and_upsertERK7qstring36type_qmongo_findupdate_find_query_cb38type_qmongo_findupdate_update_query_cb38type_qmongo_findupdate_insert_query_cb"></span><span id="qmongo::find_and_upsert__qstringCR.type_qmongo_findupdate_find_query_cb.type_qmongo_findupdate_update_query_cb.type_qmongo_findupdate_insert_query_cb"></span><span class="target" id="d8/dff/classqmongo_1ac0e9bd3a1f6b7a1fc4985686df75fbbc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find_and_upsert</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">collection_name</span></span>, <a class="reference internal" href="#_CPPv4N6qmongo36type_qmongo_findupdate_find_query_cbE" title="qmongo::type_qmongo_findupdate_find_query_cb"><span class="n"><span class="pre">type_qmongo_findupdate_find_query_cb</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">find_query_cb</span></span>, <a class="reference internal" href="#_CPPv4N6qmongo38type_qmongo_findupdate_update_query_cbE" title="qmongo::type_qmongo_findupdate_update_query_cb"><span class="n"><span class="pre">type_qmongo_findupdate_update_query_cb</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">update_query_cb</span></span>, <a class="reference internal" href="#_CPPv4N6qmongo38type_qmongo_findupdate_insert_query_cbE" title="qmongo::type_qmongo_findupdate_insert_query_cb"><span class="n"><span class="pre">type_qmongo_findupdate_insert_query_cb</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">insert_query_cb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6qmongo15find_and_upsertERK7qstring36type_qmongo_findupdate_find_query_cb38type_qmongo_findupdate_update_query_cb38type_qmongo_findupdate_insert_query_cb" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6qmongo14get_collectionERK7qstring">

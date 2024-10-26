@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,23 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>qh3server &mdash; gearsdk 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b1be9f46" />
       <link rel="stylesheet" type="text/css" href="../_static/styles.css?v=b75bc61f" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=2709fde1"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -114,7 +112,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server15get_file_loggerEv"><code class="docutils literal notranslate"><span class="pre">qh3server::get_file_logger()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server17get_stats_loggeerEv"><code class="docutils literal notranslate"><span class="pre">qh3server::get_stats_loggeer()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server25get_live_connection_countEv"><code class="docutils literal notranslate"><span class="pre">qh3server::get_live_connection_count()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_t"><code class="docutils literal notranslate"><span class="pre">qh3server::run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_tRK7qstring"><code class="docutils literal notranslate"><span class="pre">qh3server::run()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server18on_server_pre_initEv"><code class="docutils literal notranslate"><span class="pre">qh3server::on_server_pre_init()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server22on_server_uninitialiseEv"><code class="docutils literal notranslate"><span class="pre">qh3server::on_server_uninitialise()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server14on_run_startedEv"><code class="docutils literal notranslate"><span class="pre">qh3server::on_run_started()</span></code></a></li>
@@ -147,7 +145,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server3outE"><code class="docutils literal notranslate"><span class="pre">qh3server::out</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server3bufE"><code class="docutils literal notranslate"><span class="pre">qh3server::buf</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server25relay_through_router_infoE"><code class="docutils literal notranslate"><span class="pre">qh3server::relay_through_router_info</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server9debug_logEPK7uint8_tPv"><code class="docutils literal notranslate"><span class="pre">qh3server::debug_log()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server16debug_quiche_logEPK7uint8_tPv"><code class="docutils literal notranslate"><span class="pre">qh3server::debug_quiche_log()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server7gen_cidEP7uint8_t6size_t"><code class="docutils literal notranslate"><span class="pre">qh3server::gen_cid()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server15for_each_headerEPK7uint8_t6size_tPK7uint8_t6size_tPv"><code class="docutils literal notranslate"><span class="pre">qh3server::for_each_header()</span></code></a></li>
 </ul>
@@ -264,6 +262,46 @@
 <dl class="cpp macro">
 <dt class="sig sig-object cpp" id="c.TIMER_TYPE">
 <span class="target" id="d0/d9d/qh3server_8hpp_1a16d3e6f912a65db8b33fd7d4d5dc22ac"></span><span class="sig-name descname"><span class="n"><span class="pre">TIMER_TYPE</span></span></span><a class="headerlink" href="#c.TIMER_TYPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_INFO">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a6dfef2f90f66299c4e87b850d2520577"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_INFO</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_INFO" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_DEBUG">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a0653777edfc30423054c895074d5e280"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_DEBUG</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_DEBUG" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_WARN">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a5c0b48c92c39f427e0b051353e66916d"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_WARN</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_WARN" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_ERROR">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a5f79a72f95cb8360cdab45329035212d"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_ERROR</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_ERROR" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_INFO_WITH_PID">
+<span class="target" id="d0/d9d/qh3server_8hpp_1aa5c5cc1ee9ba7b615f156fef075d8e90"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_INFO_WITH_PID</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pid</span></span>, <span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_INFO_WITH_PID" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_DEBUG_WITH_PID">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a3fd15b77b8079a2ce33b3915201ce416"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_DEBUG_WITH_PID</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pid</span></span>, <span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_DEBUG_WITH_PID" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_WARN_WITH_PID">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a41a00767ad6abf1e09628e7751b1d8ea"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_WARN_WITH_PID</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pid</span></span>, <span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_WARN_WITH_PID" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.QH3_ERROR_WITH_PID">
+<span class="target" id="d0/d9d/qh3server_8hpp_1a659b8988f0f88ea1f1f4135c10e0dbbe"></span><span class="sig-name descname"><span class="n"><span class="pre">QH3_ERROR_WITH_PID</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">pid</span></span>, <span class="n"><span class="pre">tag</span></span>, <span class="p"><span class="pre">...</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.QH3_ERROR_WITH_PID" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -514,7 +552,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9qh3server15get_file_loggerEv">
-<span id="_CPPv3N9qh3server15get_file_loggerEv"></span><span id="_CPPv2N9qh3server15get_file_loggerEv"></span><span id="qh3server::get_file_logger"></span><span class="target" id="d7/db9/classqh3server_1a7d10f748a5e36c52923eaa45257b4be3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">qtextfilelogger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_file_logger</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server15get_file_loggerEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N9qh3server15get_file_loggerEv"></span><span id="_CPPv2N9qh3server15get_file_loggerEv"></span><span id="qh3server::get_file_logger"></span><span class="target" id="d7/db9/classqh3server_1a080111f3851ef33866b16c5db0897ca0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">qcustomlogger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_file_logger</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server15get_file_loggerEv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -528,8 +566,8 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_t">
-<span id="_CPPv3N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_t"></span><span id="_CPPv2N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_t"></span><span id="qh3server::run__qstringCR.qstringCR.fs::pathCR.addrinfoP.uint16_t.uint16_t"></span><span class="target" id="d7/db9/classqh3server_1a849618600cac8c74c32d49a42a452628"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">port</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">fs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">root_dir</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">addrinfo</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">router</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command_center_feedback_port</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">router_port_return</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_t" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_tRK7qstring">
+<span id="_CPPv3N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_tRK7qstring"></span><span id="_CPPv2N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_tRK7qstring"></span><span id="qh3server::run__qstringCR.qstringCR.fs::pathCR.addrinfoP.uint16_t.uint16_t.qstringCR"></span><span class="target" id="d7/db9/classqh3server_1af118218407f6be309d29f7e53f6869b6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">host</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">port</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">fs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">path</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">root_dir</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">addrinfo</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">router</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command_center_feedback_port</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">router_port_return</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">app_id</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server3runERK7qstringRK7qstringRKN2fs4pathEP8addrinfo8uint16_t8uint16_tRK7qstring" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -565,7 +603,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9qh3server6loggerE">
-<span id="_CPPv3N9qh3server6loggerE"></span><span id="_CPPv2N9qh3server6loggerE"></span><span id="qh3server::logger__qtextfileloggerP"></span><span class="target" id="d7/db9/classqh3server_1ac9e63e60b17f328e9b9da4a3adea86c9"></span><span class="n"><span class="pre">qtextfilelogger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">logger</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N9qh3server6loggerE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N9qh3server6loggerE"></span><span id="_CPPv2N9qh3server6loggerE"></span><span id="qh3server::logger__qcustomloggerP"></span><span class="target" id="d7/db9/classqh3server_1a350c9e6ca7711b4427ed343008f2a6b6"></span><span class="n"><span class="pre">qcustomlogger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">logger</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N9qh3server6loggerE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -708,8 +746,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-functions">Private Static Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9qh3server9debug_logEPK7uint8_tPv">
-<span id="_CPPv3N9qh3server9debug_logEPK7uint8_tPv"></span><span id="_CPPv2N9qh3server9debug_logEPK7uint8_tPv"></span><span id="qh3server::debug_log__uint8_tCP.voidP"></span><span class="target" id="d7/db9/classqh3server_1a1afec7bdf9d90f0547daf4f131e94528"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_log</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">line</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server9debug_logEPK7uint8_tPv" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server16debug_quiche_logEPK7uint8_tPv">
+<span id="_CPPv3N9qh3server16debug_quiche_logEPK7uint8_tPv"></span><span id="_CPPv2N9qh3server16debug_quiche_logEPK7uint8_tPv"></span><span id="qh3server::debug_quiche_log__uint8_tCP.voidP"></span><span class="target" id="d7/db9/classqh3server_1a3d951382b43bca1d13777fea17da0cfa"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_quiche_log</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">line</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server16debug_quiche_logEPK7uint8_tPv" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">

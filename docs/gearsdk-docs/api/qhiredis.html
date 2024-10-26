@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,23 +8,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>qhiredis &mdash; gearsdk 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b1be9f46" />
       <link rel="stylesheet" type="text/css" href="../_static/styles.css?v=b75bc61f" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=2709fde1"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -96,21 +94,28 @@
 <li class="toctree-l2"><a class="reference internal" href="#qhiredis-async">qhiredis_async</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv424interface_qhiredis_async"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_expiredERK7qstring"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_async_key_expired()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_changedERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_async_key_changed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async19on_qhiredis_connectEv"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async22on_qhiredis_disconnectEv"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_disconnect()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv414qhiredis_async"><code class="docutils literal notranslate"><span class="pre">qhiredis_async</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_async"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::qhiredis_async()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_asyncRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::qhiredis_async()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_asyncD0Ev"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::~qhiredis_async()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async19connect_async_redisEP7ev_loop"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::connect_async_redis()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async22disconnect_async_redisEv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::disconnect_async_redis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async15get_value_asyncERK7qstringNSt8functionIFvRK7qstringEEENSt8functionIFvRK7qstringEEE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::get_value_async()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async13async_contextE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::async_context</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async8redis_ipE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::redis_ip</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async10redis_portE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::redis_port</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async9interfaceE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::interface</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async9connectedE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::connected</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async16key_event_configE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::key_event_config</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async13on_connect_cbEPK17redisAsyncContexti"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::on_connect_cb()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async16on_disconnect_cbEPK17redisAsyncContexti"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::on_disconnect_cb()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async13on_message_cbEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::on_message_cb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async17on_redis_event_cbEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::on_redis_event_cb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async29set_notify_keyspace_events_cbEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::set_notify_keyspace_events_cb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async31get_value_async_lambda_callbackEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::get_value_async_lambda_callback()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -636,7 +641,7 @@
 <dd><div class="docutils container">
 <em>#include &lt;qhiredis_async.hpp&gt;</em></div>
 <p>Interface class for handling expired keys in Redis. </p>
-<p>Subclassed by qh3simple_router, qnetworkserver</p>
+<p>Subclassed by qh3simple_router, roomserver</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -651,6 +656,31 @@
 </dl>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_changedERK7qstringRK7qstring">
+<span id="_CPPv3N24interface_qhiredis_async29on_qhiredis_async_key_changedERK7qstringRK7qstring"></span><span id="_CPPv2N24interface_qhiredis_async29on_qhiredis_async_key_changedERK7qstringRK7qstring"></span><span id="interface_qhiredis_async::on_qhiredis_async_key_changed__qstringCR.qstringCR"></span><span class="target" id="d5/daf/classinterface__qhiredis__async_1a60d3b9553a46128112520e84c8245353"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">on_qhiredis_async_key_changed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">modified_key</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_changedERK7qstringRK7qstring" title="Link to this definition"></a><br /></dt>
+<dd><p>Callback function for handling modified keys in Redis. </p>
+<p>This function is called when a key in Redis expires.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modified_key</strong> – The modified key in Redis. </p></li>
+<li><p><strong>event</strong> – redis key event </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24interface_qhiredis_async19on_qhiredis_connectEv">
+<span id="_CPPv3N24interface_qhiredis_async19on_qhiredis_connectEv"></span><span id="_CPPv2N24interface_qhiredis_async19on_qhiredis_connectEv"></span><span id="interface_qhiredis_async::on_qhiredis_connect"></span><span class="target" id="d5/daf/classinterface__qhiredis__async_1ab23cd651d1f707872d230f77fd0a524e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">on_qhiredis_connect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N24interface_qhiredis_async19on_qhiredis_connectEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24interface_qhiredis_async22on_qhiredis_disconnectEv">
+<span id="_CPPv3N24interface_qhiredis_async22on_qhiredis_disconnectEv"></span><span id="_CPPv2N24interface_qhiredis_async22on_qhiredis_disconnectEv"></span><span id="interface_qhiredis_async::on_qhiredis_disconnect"></span><span class="target" id="d5/daf/classinterface__qhiredis__async_1a6d38a5012d932dd2681ab1fbba09f491"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">on_qhiredis_disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N24interface_qhiredis_async22on_qhiredis_disconnectEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
 </div>
 </dd></dl>
 
@@ -663,8 +693,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_async">
-<span id="_CPPv3N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_async"></span><span id="_CPPv2N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_async"></span><span id="qhiredis_async::qhiredis_async__qstringCR.uint16_t.interface_qhiredis_asyncP"></span><span class="target" id="d8/d9e/classqhiredis__async_1aa9229ec5f4fcc056123d50148b296d25"></span><span class="sig-name descname"><span class="n"><span class="pre">qhiredis_async</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">redis_ip</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">redis_port</span></span>, <a class="reference internal" href="#_CPPv424interface_qhiredis_async" title="interface_qhiredis_async"><span class="n"><span class="pre">interface_qhiredis_async</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">interface</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_async" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_asyncRK7qstring">
+<span id="_CPPv3N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_asyncRK7qstring"></span><span id="_CPPv2N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_asyncRK7qstring"></span><span id="qhiredis_async::qhiredis_async__qstringCR.uint16_t.interface_qhiredis_asyncP.qstringCR"></span><span class="target" id="d8/d9e/classqhiredis__async_1aaba6c640f074aca5a2d63b6f28a25feb"></span><span class="sig-name descname"><span class="n"><span class="pre">qhiredis_async</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">redis_ip</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">redis_port</span></span>, <a class="reference internal" href="#_CPPv424interface_qhiredis_async" title="interface_qhiredis_async"><span class="n"><span class="pre">interface_qhiredis_async</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">interface</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key_event_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tP24interface_qhiredis_asyncRK7qstring" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructor for <a class="reference internal" href="#d8/d9e/classqhiredis__async"><span class="std std-ref">qhiredis_async</span></a> class. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -672,6 +702,7 @@
 <li><p><strong>redis_ip</strong> – The IP address of the Redis server. </p></li>
 <li><p><strong>redis_port</strong> – The port number of the Redis server. </p></li>
 <li><p><strong>interface</strong> – A pointer to the <a class="reference internal" href="#d5/daf/classinterface__qhiredis__async"><span class="std std-ref">interface_qhiredis_async</span></a> object for handling callbacks. </p></li>
+<li><p><strong>key_event_config</strong> – if valid config, the context can only be used for SUBSCRIBE, UNSUBSCRIBE, PING, QUIT &amp; RESET (get_value_async cant be used) </p></li>
 </ul>
 </dd>
 </dl>
@@ -703,6 +734,24 @@
 <dd><p>Disconnects from the Redis server. </p>
 </dd></dl>
 
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async15get_value_asyncERK7qstringNSt8functionIFvRK7qstringEEENSt8functionIFvRK7qstringEEE">
+<span id="_CPPv3N14qhiredis_async15get_value_asyncERK7qstringNSt8functionIFvRK7qstringEEENSt8functionIFvRK7qstringEEE"></span><span id="_CPPv2N14qhiredis_async15get_value_asyncERK7qstringNSt8functionIFvRK7qstringEEENSt8functionIFvRK7qstringEEE"></span><span class="target" id="d8/d9e/classqhiredis__async_1afabcd72c550467e83022e65885de4622"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_value_async</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">on_success</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">on_error</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14qhiredis_async15get_value_asyncERK7qstringNSt8functionIFvRK7qstringEEENSt8functionIFvRK7qstringEEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Gets the value of a key from Redis asynchronously. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – The key name. </p></li>
+<li><p><strong>on_success</strong> – success callback. </p></li>
+<li><p><strong>on_error</strong> – error callback. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>0 if the operation is successful, -1 otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
@@ -729,6 +778,11 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async9connectedE">
 <span id="_CPPv3N14qhiredis_async9connectedE"></span><span id="_CPPv2N14qhiredis_async9connectedE"></span><span id="qhiredis_async::connected__b"></span><span class="target" id="d8/d9e/classqhiredis__async_1a2a4cdd1acbfc4bc40412e7a14dee13ad"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">connected</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N14qhiredis_async9connectedE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async16key_event_configE">
+<span id="_CPPv3N14qhiredis_async16key_event_configE"></span><span id="_CPPv2N14qhiredis_async16key_event_configE"></span><span id="qhiredis_async::key_event_config__qstring"></span><span class="target" id="d8/d9e/classqhiredis__async_1af620140f460352272603306f97a13e6d"></span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">key_event_config</span></span></span><a class="headerlink" href="#_CPPv4N14qhiredis_async16key_event_configE" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -763,8 +817,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async13on_message_cbEP17redisAsyncContextPvPv">
-<span id="_CPPv3N14qhiredis_async13on_message_cbEP17redisAsyncContextPvPv"></span><span id="_CPPv2N14qhiredis_async13on_message_cbEP17redisAsyncContextPvPv"></span><span id="qhiredis_async::on_message_cb__redisAsyncContextP.voidP.voidP"></span><span class="target" id="d8/d9e/classqhiredis__async_1a9a7fac5b8117bd697e985e34d44dfc99"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">on_message_cb</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">redisAsyncContext</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">reply</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14qhiredis_async13on_message_cbEP17redisAsyncContextPvPv" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async17on_redis_event_cbEP17redisAsyncContextPvPv">
+<span id="_CPPv3N14qhiredis_async17on_redis_event_cbEP17redisAsyncContextPvPv"></span><span id="_CPPv2N14qhiredis_async17on_redis_event_cbEP17redisAsyncContextPvPv"></span><span id="qhiredis_async::on_redis_event_cb__redisAsyncContextP.voidP.voidP"></span><span class="target" id="d8/d9e/classqhiredis__async_1a7dd9ece3cede37a0bce8ad47801731ca"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">on_redis_event_cb</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">redisAsyncContext</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">c</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">reply</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14qhiredis_async17on_redis_event_cbEP17redisAsyncContextPvPv" title="Link to this definition"></a><br /></dt>
 <dd><p>Callback function for handling the response from Redis. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -776,6 +830,16 @@
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async29set_notify_keyspace_events_cbEP17redisAsyncContextPvPv">
+<span id="_CPPv3N14qhiredis_async29set_notify_keyspace_events_cbEP17redisAsyncContextPvPv"></span><span id="_CPPv2N14qhiredis_async29set_notify_keyspace_events_cbEP17redisAsyncContextPvPv"></span><span id="qhiredis_async::set_notify_keyspace_events_cb__redisAsyncContextP.voidP.voidP"></span><span class="target" id="d8/d9e/classqhiredis__async_1aea323daa6abe6a00d6952723716e38c3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_notify_keyspace_events_cb</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">redisAsyncContext</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">context</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">reply</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">privdata</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14qhiredis_async29set_notify_keyspace_events_cbEP17redisAsyncContextPvPv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14qhiredis_async31get_value_async_lambda_callbackEP17redisAsyncContextPvPv">
+<span id="_CPPv3N14qhiredis_async31get_value_async_lambda_callbackEP17redisAsyncContextPvPv"></span><span id="_CPPv2N14qhiredis_async31get_value_async_lambda_callbackEP17redisAsyncContextPvPv"></span><span id="qhiredis_async::get_value_async_lambda_callback__redisAsyncContextP.voidP.voidP"></span><span class="target" id="d8/d9e/classqhiredis__async_1a91c070a607568e4c2c9e0b4280424bcd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_value_async_lambda_callback</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">redisAsyncContext</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">context</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">reply</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">privdata</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14qhiredis_async31get_value_async_lambda_callbackEP17redisAsyncContextPvPv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>
