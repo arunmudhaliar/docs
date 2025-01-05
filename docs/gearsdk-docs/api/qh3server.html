@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>qh3server &mdash; gearsdk 0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b1be9f46" />
@@ -69,6 +69,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server14on_run_startedEv"><code class="docutils literal notranslate"><span class="pre">qh3server::on_run_started()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server10on_run_endEv"><code class="docutils literal notranslate"><span class="pre">qh3server::on_run_end()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server12parse_headerERK7qstringRK7qstringP11conn_io_qh3"><code class="docutils literal notranslate"><span class="pre">qh3server::parse_header()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server17try_report_routerERK7qstringi8uint16_t"><code class="docutils literal notranslate"><span class="pre">qh3server::try_report_router()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server6loggerE"><code class="docutils literal notranslate"><span class="pre">qh3server::logger</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server12stats_loggerE"><code class="docutils literal notranslate"><span class="pre">qh3server::stats_logger</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N9qh3server6logtagE"><code class="docutils literal notranslate"><span class="pre">qh3server::logtag</span></code></a></li>
@@ -265,6 +266,11 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9qh3server12parse_headerERK7qstringRK7qstringP11conn_io_qh3">
 <span id="_CPPv3N9qh3server12parse_headerERK7qstringRK7qstringP11conn_io_qh3"></span><span id="_CPPv2N9qh3server12parse_headerERK7qstringRK7qstringP11conn_io_qh3"></span><span id="qh3server::parse_header__qstringCR.qstringCR.conn_io_qh3P"></span><span class="target" id="d7/db9/classqh3server_1af7815996e02bcb8e87b08d6862d087d7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parse_header</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="n"><span class="pre">conn_io_qh3</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">conn_io</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9qh3server12parse_headerERK7qstringRK7qstringP11conn_io_qh3" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9qh3server17try_report_routerERK7qstringi8uint16_t">
+<span id="_CPPv3N9qh3server17try_report_routerERK7qstringi8uint16_t"></span><span id="_CPPv2N9qh3server17try_report_routerERK7qstringi8uint16_t"></span><span id="qh3server::try_report_router__qstringCR.i.uint16_t"></span><span class="target" id="d7/db9/classqh3server_1a617fb9c53baeb1c572c9dc4862df2c55"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">try_report_router</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="common.html#_CPPv47qstring" title="qstring"><span class="n"><span class="pre">qstring</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cmd_string</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sock</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">command_center_feedback_port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9qh3server17try_report_routerERK7qstringi8uint16_t" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
