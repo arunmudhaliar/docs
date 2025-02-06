@@ -11,8 +11,8 @@ Test results - qh3client
      <td><strong>Failures:</strong> 0</td>
      <td><strong>Disabled:</strong> 0</td>
      <td><strong>Errors:</strong> 0</td>
-     <td><strong>Total time taken:</strong> 35.871s</td>
-     <td><strong>Timestamp:</strong> 2025-02-06T19:56:33.435</td>
+     <td><strong>Total time taken:</strong> 41.211s</td>
+     <td><strong>Timestamp:</strong> 2025-02-06T20:51:21.715</td>
    </tr>
    </table>
 
@@ -27,8 +27,8 @@ Test results - qh3client
      <td><strong>Failures:</strong> 0</td>
      <td><strong>Disabled:</strong> 0</td>
      <td><strong>Errors:</strong> 0</td>
-     <td><strong>Time:</strong> 35.871s</td>
-     <td><strong>Timestamp:</strong> 2025-02-06T19:56:33.436</td>
+     <td><strong>Time:</strong> 41.211s</td>
+     <td><strong>Timestamp:</strong> 2025-02-06T20:51:21.715</td>
    </tr>
    </table>
 
@@ -47,106 +47,106 @@ Test results - qh3client
      <td>runs_five_time/functional_test_qh3client::test_send_request/0</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.424s</td>
-     <td>2025-02-06T19:56:33.436</td>
+     <td>2.555s</td>
+     <td>2025-02-06T20:51:21.715</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/1</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.426s</td>
-     <td>2025-02-06T19:56:35.860</td>
+     <td>3.017s</td>
+     <td>2025-02-06T20:51:24.270</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/2</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.18s</td>
-     <td>2025-02-06T19:56:38.287</td>
+     <td>2.519s</td>
+     <td>2025-02-06T20:51:27.288</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/3</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.48s</td>
-     <td>2025-02-06T19:56:40.467</td>
+     <td>2.57s</td>
+     <td>2025-02-06T20:51:29.808</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_send_request/4</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.448s</td>
-     <td>2025-02-06T19:56:42.947</td>
+     <td>3.122s</td>
+     <td>2025-02-06T20:51:32.378</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_request_with_callback/0</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.182s</td>
-     <td>2025-02-06T19:56:45.396</td>
+     <td>2.658s</td>
+     <td>2025-02-06T20:51:35.501</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_request_with_callback/1</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.687s</td>
-     <td>2025-02-06T19:56:47.578</td>
+     <td>2.754s</td>
+     <td>2025-02-06T20:51:38.160</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_request_with_callback/2</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.211s</td>
-     <td>2025-02-06T19:56:50.266</td>
+     <td>2.591s</td>
+     <td>2025-02-06T20:51:40.914</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_request_with_callback/3</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.822s</td>
-     <td>2025-02-06T19:56:52.478</td>
+     <td>2.724s</td>
+     <td>2025-02-06T20:51:43.506</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_request_with_callback/4</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.166s</td>
-     <td>2025-02-06T19:56:55.301</td>
+     <td>2.629s</td>
+     <td>2025-02-06T20:51:46.230</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_async_request_with_callback/0</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.425s</td>
-     <td>2025-02-06T19:56:57.467</td>
+     <td>2.782s</td>
+     <td>2025-02-06T20:51:48.859</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_async_request_with_callback/1</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.418s</td>
-     <td>2025-02-06T19:56:59.893</td>
+     <td>2.616s</td>
+     <td>2025-02-06T20:51:51.642</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_async_request_with_callback/2</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.393s</td>
-     <td>2025-02-06T19:57:02.311</td>
+     <td>3.235s</td>
+     <td>2025-02-06T20:51:54.258</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_async_request_with_callback/3</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.41s</td>
-     <td>2025-02-06T19:57:04.705</td>
+     <td>2.665s</td>
+     <td>2025-02-06T20:51:57.493</td>
    </tr>
    <tr class="passed">
      <td>runs_five_time/functional_test_qh3client::test_qh3client_helper_send_async_request_with_callback/4</td>
      <td>Passed</td>
      <td>No issues</td>
-     <td>2.192s</td>
-     <td>2025-02-06T19:57:07.115</td>
+     <td>2.766s</td>
+     <td>2025-02-06T20:52:00.160</td>
    </tr>
    </tbody>
    </table>
