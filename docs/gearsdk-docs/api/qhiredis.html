@@ -59,67 +59,68 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">qhiredis</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#header-files">header files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">qhiredis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#c.__LOGTAG__"><code class="docutils literal notranslate"><span class="pre">__LOGTAG__</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv439type_redis_hash_iterator_field_value_cb"><code class="docutils literal notranslate"><span class="pre">type_redis_hash_iterator_field_value_cb</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv443type_redis_scan_iterator_key_field_value_cb"><code class="docutils literal notranslate"><span class="pre">type_redis_scan_iterator_key_field_value_cb</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv48qhiredis"><code class="docutils literal notranslate"><span class="pre">qhiredis</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis8qhiredisEK7qstringRK7qstring8uint16_tRK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis::qhiredis()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredisD0Ev"><code class="docutils literal notranslate"><span class="pre">qhiredis::~qhiredis()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis13connect_redisEb"><code class="docutils literal notranslate"><span class="pre">qhiredis::connect_redis()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis16disconnect_redisEv"><code class="docutils literal notranslate"><span class="pre">qhiredis::disconnect_redis()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis9set_valueERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis::set_value()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis9set_valueERK7qstringRK7qstringi"><code class="docutils literal notranslate"><span class="pre">qhiredis::set_value()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis9get_valueERK7qstringR7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis::get_value()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis14set_hash_valueERK7qstringRK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis::set_hash_value()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis14get_hash_valueERK7qstringRK7qstringR7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis::get_hash_value()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis17delete_hash_fieldERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis::delete_hash_field()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4incrERK7qstringRx"><code class="docutils literal notranslate"><span class="pre">qhiredis::incr()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4decrERK7qstringRx"><code class="docutils literal notranslate"><span class="pre">qhiredis::decr()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis7incr_byERK7qstringKiRx"><code class="docutils literal notranslate"><span class="pre">qhiredis::incr_by()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis7decr_byERK7qstringKiRx"><code class="docutils literal notranslate"><span class="pre">qhiredis::decr_by()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis10expire_keyERK7qstringi"><code class="docutils literal notranslate"><span class="pre">qhiredis::expire_key()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis12iterate_hashERK7qstringPv39type_redis_hash_iterator_field_value_cb"><code class="docutils literal notranslate"><span class="pre">qhiredis::iterate_hash()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis10delete_keyERK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis::delete_key()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4scanERK7qstringPv43type_redis_scan_iterator_key_field_value_cb"><code class="docutils literal notranslate"><span class="pre">qhiredis::scan()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis16retry_connectionEv"><code class="docutils literal notranslate"><span class="pre">qhiredis::retry_connection()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis22connect_redis_internalERK7qstringRK7qstringRK7qstring8uint16_tb"><code class="docutils literal notranslate"><span class="pre">qhiredis::connect_redis_internal()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis7contextE"><code class="docutils literal notranslate"><span class="pre">qhiredis::context</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4NAMEE"><code class="docutils literal notranslate"><span class="pre">qhiredis::NAME</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis8redis_ipE"><code class="docutils literal notranslate"><span class="pre">qhiredis::redis_ip</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis10redis_portE"><code class="docutils literal notranslate"><span class="pre">qhiredis::redis_port</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis15redis_user_nameE"><code class="docutils literal notranslate"><span class="pre">qhiredis::redis_user_name</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis19redis_user_passwordE"><code class="docutils literal notranslate"><span class="pre">qhiredis::redis_user_password</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis12iterate_hashEP12redisContextPKcPv39type_redis_hash_iterator_field_value_cb"><code class="docutils literal notranslate"><span class="pre">qhiredis::iterate_hash()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis8qhiredisEK7qstringRK7qstring8uint16_tRK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredisD0Ev"><code class="docutils literal notranslate"><span class="pre">~qhiredis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis13connect_redisEb"><code class="docutils literal notranslate"><span class="pre">connect_redis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis16disconnect_redisEv"><code class="docutils literal notranslate"><span class="pre">disconnect_redis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis9set_valueERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">set_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis9set_valueERK7qstringRK7qstringi"><code class="docutils literal notranslate"><span class="pre">set_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis9get_valueERK7qstringR7qstring"><code class="docutils literal notranslate"><span class="pre">get_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis14set_hash_valueERK7qstringRK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">set_hash_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis14get_hash_valueERK7qstringRK7qstringR7qstring"><code class="docutils literal notranslate"><span class="pre">get_hash_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis17delete_hash_fieldERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">delete_hash_field()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4incrERK7qstringRx"><code class="docutils literal notranslate"><span class="pre">incr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4decrERK7qstringRx"><code class="docutils literal notranslate"><span class="pre">decr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis7incr_byERK7qstringKiRx"><code class="docutils literal notranslate"><span class="pre">incr_by()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis7decr_byERK7qstringKiRx"><code class="docutils literal notranslate"><span class="pre">decr_by()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis10expire_keyERK7qstringi"><code class="docutils literal notranslate"><span class="pre">expire_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis12iterate_hashERK7qstringPv39type_redis_hash_iterator_field_value_cb"><code class="docutils literal notranslate"><span class="pre">iterate_hash()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis10delete_keyERK7qstring"><code class="docutils literal notranslate"><span class="pre">delete_key()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4scanERK7qstringPv43type_redis_scan_iterator_key_field_value_cb"><code class="docutils literal notranslate"><span class="pre">scan()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis16retry_connectionEv"><code class="docutils literal notranslate"><span class="pre">retry_connection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis22connect_redis_internalERK7qstringRK7qstringRK7qstring8uint16_tb"><code class="docutils literal notranslate"><span class="pre">connect_redis_internal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis7contextE"><code class="docutils literal notranslate"><span class="pre">context</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis4NAMEE"><code class="docutils literal notranslate"><span class="pre">NAME</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis8redis_ipE"><code class="docutils literal notranslate"><span class="pre">redis_ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis10redis_portE"><code class="docutils literal notranslate"><span class="pre">redis_port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis15redis_user_nameE"><code class="docutils literal notranslate"><span class="pre">redis_user_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis19redis_user_passwordE"><code class="docutils literal notranslate"><span class="pre">redis_user_password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N8qhiredis12iterate_hashEP12redisContextPKcPv39type_redis_hash_iterator_field_value_cb"><code class="docutils literal notranslate"><span class="pre">iterate_hash()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#qhiredis-async">qhiredis_async</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv424interface_qhiredis_async"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_expiredERK7qstring"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_async_key_expired()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_changedERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_async_key_changed()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async19on_qhiredis_connectEv"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_connect()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async22on_qhiredis_disconnectEv"><code class="docutils literal notranslate"><span class="pre">interface_qhiredis_async::on_qhiredis_disconnect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_expiredERK7qstring"><code class="docutils literal notranslate"><span class="pre">on_qhiredis_async_key_expired()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async29on_qhiredis_async_key_changedERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">on_qhiredis_async_key_changed()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async19on_qhiredis_connectEv"><code class="docutils literal notranslate"><span class="pre">on_qhiredis_connect()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N24interface_qhiredis_async22on_qhiredis_disconnectEv"><code class="docutils literal notranslate"><span class="pre">on_qhiredis_disconnect()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv414qhiredis_async"><code class="docutils literal notranslate"><span class="pre">qhiredis_async</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tRK7qstringRK7qstringP24interface_qhiredis_asyncRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::qhiredis_async()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_asyncD0Ev"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::~qhiredis_async()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async19connect_async_redisEP7ev_loop"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::connect_async_redis()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async22disconnect_async_redisEv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::disconnect_async_redis()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async15get_value_asyncERK7qstringNSt8functionIFvRK7qstringEEENSt8functionIFvRK7qstringEEE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::get_value_async()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async13async_contextE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::async_context</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async8redis_ipE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::redis_ip</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async10redis_portE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::redis_port</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async15redis_user_nameE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::redis_user_name</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async19redis_user_passwordE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::redis_user_password</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async9interfaceE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::interface</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async9connectedE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::connected</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async16key_event_configE"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::key_event_config</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async13on_connect_cbEPK17redisAsyncContexti"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::on_connect_cb()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async16on_disconnect_cbEPK17redisAsyncContexti"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::on_disconnect_cb()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async17on_redis_event_cbEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::on_redis_event_cb()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async29set_notify_keyspace_events_cbEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::set_notify_keyspace_events_cb()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async31get_value_async_lambda_callbackEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">qhiredis_async::get_value_async_lambda_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async14qhiredis_asyncERK7qstring8uint16_tRK7qstringRK7qstringP24interface_qhiredis_asyncRK7qstring"><code class="docutils literal notranslate"><span class="pre">qhiredis_async()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_asyncD0Ev"><code class="docutils literal notranslate"><span class="pre">~qhiredis_async()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async19connect_async_redisEP7ev_loop"><code class="docutils literal notranslate"><span class="pre">connect_async_redis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async22disconnect_async_redisEv"><code class="docutils literal notranslate"><span class="pre">disconnect_async_redis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async15get_value_asyncERK7qstringNSt8functionIFvRK7qstringEEENSt8functionIFvRK7qstringEEE"><code class="docutils literal notranslate"><span class="pre">get_value_async()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async13async_contextE"><code class="docutils literal notranslate"><span class="pre">async_context</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async8redis_ipE"><code class="docutils literal notranslate"><span class="pre">redis_ip</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async10redis_portE"><code class="docutils literal notranslate"><span class="pre">redis_port</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async15redis_user_nameE"><code class="docutils literal notranslate"><span class="pre">redis_user_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async19redis_user_passwordE"><code class="docutils literal notranslate"><span class="pre">redis_user_password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async9interfaceE"><code class="docutils literal notranslate"><span class="pre">interface</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async9connectedE"><code class="docutils literal notranslate"><span class="pre">connected</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async16key_event_configE"><code class="docutils literal notranslate"><span class="pre">key_event_config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async13on_connect_cbEPK17redisAsyncContexti"><code class="docutils literal notranslate"><span class="pre">on_connect_cb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async16on_disconnect_cbEPK17redisAsyncContexti"><code class="docutils literal notranslate"><span class="pre">on_disconnect_cb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async17on_redis_event_cbEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">on_redis_event_cb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async29set_notify_keyspace_events_cbEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">set_notify_keyspace_events_cb()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N14qhiredis_async31get_value_async_lambda_callbackEP17redisAsyncContextPvPv"><code class="docutils literal notranslate"><span class="pre">get_value_async_lambda_callback()</span></code></a></li>
 </ul>
 </li>
 </ul>
