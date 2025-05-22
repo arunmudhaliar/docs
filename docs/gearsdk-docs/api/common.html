@@ -63,13 +63,13 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring7qstringEKl"><code class="docutils literal notranslate"><span class="pre">qstring()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring7qstringEPKci"><code class="docutils literal notranslate"><span class="pre">qstring()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring7qstringEPKc6size_t"><code class="docutils literal notranslate"><span class="pre">qstring()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring7qstringEPKcj"><code class="docutils literal notranslate"><span class="pre">qstring()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring7qstringEPK7uint8_t6size_t"><code class="docutils literal notranslate"><span class="pre">qstring()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring7qstringERK7qstring"><code class="docutils literal notranslate"><span class="pre">qstring()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring4copyERK7qstring"><code class="docutils literal notranslate"><span class="pre">copy()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring4copyEPKc"><code class="docutils literal notranslate"><span class="pre">copy()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring10run_printfEPKci"><code class="docutils literal notranslate"><span class="pre">run_printf()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring8bin_copyEPK7uint8_t7ssize_t"><code class="docutils literal notranslate"><span class="pre">bin_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring8bin_copyEPK7uint8_t6size_t"><code class="docutils literal notranslate"><span class="pre">bin_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring20bin_copy_with_offsetEPK7uint8_t6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">bin_copy_with_offset()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring6formatEPKcz"><code class="docutils literal notranslate"><span class="pre">format()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK7qstring4findElRK7qstring"><code class="docutils literal notranslate"><span class="pre">find()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N7qstring7replaceERK7qstringRK7qstring"><code class="docutils literal notranslate"><span class="pre">replace()</span></code></a></li>
@@ -325,26 +325,16 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7qstring7qstringEPKcj">
-<span id="_CPPv3N7qstring7qstringEPKcj"></span><span id="_CPPv2N7qstring7qstringEPKcj"></span><span id="qstring::qstring__cCP.unsigned"></span><span class="target" id="dc/d1d/classqstring_1adb5c618c9e934f640afb502c21325c60"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qstring</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qstring7qstringEPKcj" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N7qstring7qstringEPK7uint8_t6size_t">
+<span id="_CPPv3N7qstring7qstringEPK7uint8_t6size_t"></span><span id="_CPPv2N7qstring7qstringEPK7uint8_t6size_t"></span><span id="qstring::qstring__uint8_tCP.s"></span><span class="target" id="dc/d1d/classqstring_1ae67ca4a6112f9b106bd313d4fc39e852"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qstring</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qstring7qstringEPK7uint8_t6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructs from a substring with size_t length. </p>
+<p>
+Constructs from a binary buffer. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>str</strong> – C-style string. </p></li>
-<li><p><strong>len</strong> – Length of the substring. </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7qstring7qstringEPK7uint8_t6size_t">
-<span id="_CPPv3N7qstring7qstringEPK7uint8_t6size_t"></span><span id="_CPPv2N7qstring7qstringEPK7uint8_t6size_t"></span><span id="qstring::qstring__uint8_tCP.s"></span><span class="target" id="dc/d1d/classqstring_1ae67ca4a6112f9b106bd313d4fc39e852"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qstring</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">str</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qstring7qstringEPK7uint8_t6size_t" title="Link to this definition"></a><br /></dt>
-<dd><p>Constructs from a binary buffer. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<li><p><strong>len</strong> – Length of the substring.</p></li>
 <li><p><strong>str</strong> – Pointer to the binary data. </p></li>
 <li><p><strong>len</strong> – Length of the binary data. </p></li>
 </ul>
@@ -400,8 +390,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N7qstring8bin_copyEPK7uint8_t7ssize_t">
-<span id="_CPPv3N7qstring8bin_copyEPK7uint8_t7ssize_t"></span><span id="_CPPv2N7qstring8bin_copyEPK7uint8_t7ssize_t"></span><span id="qstring::bin_copy__uint8_tCP.ssize_t"></span><span class="target" id="dc/d1d/classqstring_1a41e7d127bdcedb59b799b5a4c570e29e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bin_copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">ssize_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qstring8bin_copyEPK7uint8_t7ssize_t" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N7qstring8bin_copyEPK7uint8_t6size_t">
+<span id="_CPPv3N7qstring8bin_copyEPK7uint8_t6size_t"></span><span id="_CPPv2N7qstring8bin_copyEPK7uint8_t6size_t"></span><span id="qstring::bin_copy__uint8_tCP.s"></span><span class="target" id="dc/d1d/classqstring_1a480ee51126c09317161fd69b9beabd8c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bin_copy</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qstring8bin_copyEPK7uint8_t6size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Copies binary data into the qstring object. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -412,6 +402,11 @@
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qstring20bin_copy_with_offsetEPK7uint8_t6size_t6size_t">
+<span id="_CPPv3N7qstring20bin_copy_with_offsetEPK7uint8_t6size_t6size_t"></span><span id="_CPPv2N7qstring20bin_copy_with_offsetEPK7uint8_t6size_t6size_t"></span><span id="qstring::bin_copy_with_offset__uint8_tCP.s.s"></span><span class="target" id="dc/d1d/classqstring_1a5a54de361e43456b648a3fe7265e2dd3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bin_copy_with_offset</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qstring20bin_copy_with_offsetEPK7uint8_t6size_t6size_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7qstring6formatEPKcz">
@@ -492,7 +487,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qstring6lengthEv">
-<span id="_CPPv3NK7qstring6lengthEv"></span><span id="_CPPv2NK7qstring6lengthEv"></span><span id="qstring::lengthC"></span><span class="target" id="dc/d1d/classqstring_1a37926816727af2166337cbc3fa97ba3f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qstring6lengthEv" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qstring6lengthEv"></span><span id="_CPPv2NK7qstring6lengthEv"></span><span id="qstring::lengthC"></span><span class="target" id="dc/d1d/classqstring_1a16dcc3fa2372fe1994bc7f323b2d4ef2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">length</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qstring6lengthEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Returns the length of the string. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>

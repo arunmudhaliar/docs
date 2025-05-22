@@ -222,6 +222,12 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/networkcommon.html#_CPPv410essentials">essentials (C++ class)</a>
 </li>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials22current_time_in_millisEv">essentials::current_time_in_millis (C++ function)</a>
+</li>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials16deserialize_timeEPK7uint8_t7ssize_t">essentials::deserialize_time (C++ function)</a>
+</li>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials26deserialize_time_in_millisEPK7uint8_t7ssize_t">essentials::deserialize_time_in_millis (C++ function)</a>
+</li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials20generate_random_dataEP7uint8_t6size_t">essentials::generate_random_data (C++ function)</a>
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials16get_addr_storageER16sockaddr_storagePKcKi">essentials::get_addr_storage (C++ function)</a>
@@ -246,9 +252,9 @@
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials11get_sysnameEv">essentials::get_sysname (C++ function)</a>
 </li>
-      <li><a href="api/networkcommon.html#_CPPv4N10essentials14get_time_localEv">essentials::get_time_local (C++ function)</a>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials14get_time_localER2tm">essentials::get_time_local (C++ function)</a>
 </li>
-      <li><a href="api/networkcommon.html#_CPPv4N10essentials23get_time_local_tostringER6time_t">essentials::get_time_local_tostring (C++ function)</a>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials23get_time_local_readableER6time_t">essentials::get_time_local_readable (C++ function)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -269,6 +275,10 @@
       <li><a href="api/networkcommon.html#_CPPv4N10essentials11mod_crc32_zE5uLongPK5Bytef8z_size_t">essentials::mod_crc32_z (C++ function)</a>
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials21resolve_cmd_line_argsEPKc7int32_tA_PKcRK7qstringjR7qstringR7qstringR7qstringRN2fs4pathER7qstringR8uint16_tR7qstring">essentials::resolve_cmd_line_args (C++ function)</a>
+</li>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials14serialize_timeER7qstring6time_t">essentials::serialize_time (C++ function)</a>
+</li>
+      <li><a href="api/networkcommon.html#_CPPv4N10essentials24serialize_time_in_millisER7qstring6size_t7int64_t">essentials::serialize_time_in_millis (C++ function)</a>
 </li>
       <li><a href="api/networkcommon.html#_CPPv4N10essentials16set_non_blockingEi">essentials::set_non_blocking (C++ function)</a>
 </li>
@@ -752,7 +762,9 @@
 </li>
       <li><a href="api/common.html#_CPPv47qstring">qstring (C++ class)</a>
 </li>
-      <li><a href="api/common.html#_CPPv4N7qstring8bin_copyEPK7uint8_t7ssize_t">qstring::bin_copy (C++ function)</a>
+      <li><a href="api/common.html#_CPPv4N7qstring8bin_copyEPK7uint8_t6size_t">qstring::bin_copy (C++ function)</a>
+</li>
+      <li><a href="api/common.html#_CPPv4N7qstring20bin_copy_with_offsetEPK7uint8_t6size_t6size_t">qstring::bin_copy_with_offset (C++ function)</a>
 </li>
       <li><a href="api/common.html#_CPPv4NK7qstring5c_strEv">qstring::c_str (C++ function)</a>
 </li>
@@ -788,7 +800,7 @@
 </li>
       <li><a href="api/common.html#_CPPv4N7qstringeqERK7qstring">qstring::operator== (C++ function)</a>
 </li>
-      <li><a href="api/common.html#_CPPv4N7qstring7qstringEKi">qstring::qstring (C++ function)</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEKl">[1]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPK7uint8_t6size_t">[2]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPKc">[3]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPKc6size_t">[4]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPKci">[5]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPKcj">[6]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringERK7qstring">[7]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEv">[8]</a>
+      <li><a href="api/common.html#_CPPv4N7qstring7qstringEKi">qstring::qstring (C++ function)</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEKl">[1]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPK7uint8_t6size_t">[2]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPKc">[3]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPKc6size_t">[4]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEPKci">[5]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringERK7qstring">[6]</a>, <a href="api/common.html#_CPPv4N7qstring7qstringEv">[7]</a>
 </li>
       <li><a href="api/common.html#_CPPv4N7qstring7replaceERK7qstringRK7qstring">qstring::replace (C++ function)</a>
 </li>
